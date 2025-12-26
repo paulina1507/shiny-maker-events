@@ -1,1 +1,127 @@
-/* Componentes */
+/* =========================
+   BOTONES
+   ========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius-md);
+
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: var(--transition-base);
+  border: none;
+}
+
+/* Acción principal */
+.btn--primary {
+  background-color: var(--color-action);
+  color: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+}
+
+/* Secundario */
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border-soft);
+}
+
+.btn--secondary:hover {
+  background-color: #ffffff;
+}
+
+/* Outline */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-action);
+  border: 1px solid var(--color-action);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-action);
+  color: #ffffff;
+}
+
+/* =========================
+   BADGES
+   ========================= */
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background-color: var(--color-highlight);
+  color: #ffffff;
+}
+
+/* =========================
+   CARDS BASE
+   ========================= */
+
+.package-card,
+.demo-card,
+.section-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-soft);
+  padding: 2rem;
+  transition: var(--transition-base);
+}
+
+.package-card:hover,
+.demo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Card destacada */
+.package-card--featured {
+  border-color: var(--color-action);
+}
+
+/* =========================
+   HOVER FINO
+   ========================= */
+
+.package-card:hover,
+.demo-card:hover,
+.section-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   ESPACIADO DE CARDS
+   ========================= */
+
+.package-card,
+.demo-card,
+.section-card {
+  padding: 2.4rem;
+}
+
+.package-card p,
+.demo-card p {
+  margin-bottom: 1.6rem;
+}

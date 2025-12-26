@@ -1,1 +1,284 @@
-<!-- Shiny Maker Events | Web principal -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shiny Maker Events | Invitaciones Digitales</title>
+
+    <!-- SEO Básico -->
+    <meta
+      name="description"
+      content="Invitaciones digitales elegantes para bodas, XV años, bautizos y cumpleaños. Diseños interactivos, confirmación de invitados, pases digitales y QR personalizados con Shiny Maker Events."
+    />
+    <meta
+      name="keywords"
+      content="invitaciones digitales, invitaciones boda, invitaciones xv años, invitaciones interactivas, invitaciones con QR, pases digitales evento"
+    />
+    <meta name="author" content="Shiny Maker Events" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Shiny Maker Events | Invitaciones digitales que se viven"
+    />
+    <meta
+      property="og:description"
+      content="Invitaciones digitales elegantes con confirmación, pases digitales y QR personalizados para tu evento."
+    />
+    <meta property="og:url" content="https://tudominio.com/" />
+    <meta
+      property="og:image"
+      content="https://tudominio.com/assets/img/branding/og-cover.jpg"
+    />
+    <meta property="og:site_name" content="Shiny Maker Events" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- HEADER (NO SE TOCA) -->
+    <header class="header reveal">
+      <div class="container header__content">
+        <div class="logo">Shiny Maker Events</div>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav">
+          <a href="#inicio">Inicio</a>
+          <a href="#invitaciones">Invitaciones</a>
+          <a href="#paquetes">Paquetes</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#demos">Demos</a>
+          <a
+            href="javascript:void(0)"
+            class="btn btn--primary nav-cta"
+            onclick="openWhatsApp()"
+          >
+            Solicitar información
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="container hero__content">
+        <div class="hero__text reveal">
+          <h1>Invitaciones digitales que se viven</h1>
+          <p>Bodas · XV años · Bautizos · Cumpleaños</p>
+
+          <div class="hero__actions reveal reveal--delay-1">
+            <a
+              href="javascript:void(0)"
+              class="btn btn--primary"
+              onclick="openWhatsApp()"
+            >
+              Quiero mi invitación digital
+            </a>
+            <a href="#demos" class="btn btn--secondary">
+              Ver demos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVITACIONES -->
+    <section id="invitaciones" class="sections">
+      <div class="container">
+        <h2 class="reveal">¿Qué incluye tu invitación?</h2>
+        <p class="section__intro reveal reveal--delay-1">
+          Todas nuestras invitaciones incluyen las mismas secciones y un diseño
+          elegante. La diferencia está en el nivel de control y experiencia.
+        </p>
+
+        <div class="sections__grid">
+          <div class="section-card reveal">Inicio</div>
+          <div class="section-card reveal reveal--delay-1">Lugar</div>
+          <div class="section-card reveal reveal--delay-2">Programa</div>
+          <div class="section-card reveal reveal--delay-3">Regalos</div>
+          <div class="section-card reveal">Vestimenta</div>
+          <div class="section-card reveal reveal--delay-1">Galería</div>
+          <div class="section-card reveal reveal--delay-2">Asistencia</div>
+        </div>
+
+        <div class="reveal reveal--delay-3" style="margin-top:2.5rem;">
+          <a href="#paquetes" class="btn btn--secondary">
+            Ver opciones de invitación
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES -->
+    <section id="paquetes" class="packages">
+      <div class="container">
+        <h2 class="reveal">Paquetes</h2>
+
+        <div class="packages__grid">
+          <article class="package-card reveal">
+            <h3>Esencia</h3>
+            <p>Confirmación simple y diseño elegante.</p>
+            <a
+              href="javascript:void(0)"
+              class="btn btn--outline"
+              onclick="openWhatsApp('esencia')"
+            >
+              Me interesa Esencia
+            </a>
+          </article>
+
+          <article class="package-card reveal reveal--delay-1">
+            <h3>Armonía</h3>
+            <p>Control de invitados, pases y mesas.</p>
+            <a
+              href="javascript:void(0)"
+              class="btn btn--outline"
+              onclick="openWhatsApp('armonia')"
+            >
+              Quiero más control
+            </a>
+          </article>
+
+          <article
+            class="package-card package-card--featured reveal reveal--delay-2"
+          >
+            <span class="badge">Más elegido</span>
+            <h3>Experiencia</h3>
+            <p>Todo lo anterior + QR personalizado.</p>
+            <a
+              href="javascript:void(0)"
+              class="btn btn--primary"
+              onclick="openWhatsApp('experiencia')"
+            >
+              Quiero la experiencia completa
+            </a>
+          </article>
+        </div>
+
+                <div class="comparison reveal reveal--delay-3">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Funcionalidad</th>
+                <th>Esencia</th>
+                <th>Armonía</th>
+                <th class="highlight">Experiencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Secciones completas</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+              </tr>
+              <tr>
+                <td>Confirmación de asistencia</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+              </tr>
+              <tr>
+                <td>Música automática</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+              </tr>
+              <tr>
+                <td>Panel de invitados</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+              </tr>
+              <tr>
+                <td>Pases por invitado</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+              </tr>
+              <tr>
+                <td>Mesas asignadas</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+              </tr>
+              <tr>
+                <td>Pase digital</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+              </tr>
+              <tr>
+                <td>QR personalizado</td>
+                <td class="no">✕</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="comparison-note">
+            Elige el nivel de experiencia que deseas para tu evento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso" class="process">
+      <div class="container">
+        <h2 class="reveal">Así creamos tu invitación digital</h2>
+        <p class="section__intro reveal reveal--delay-1">
+          Un proceso sencillo, acompañado y sin complicaciones.
+        </p>
+
+        <div class="process__steps">
+          <div class="process-step reveal"><span>1</span><h4>Solicita información</h4></div>
+          <div class="process-step reveal reveal--delay-1"><span>2</span><h4>Personalización</h4></div>
+          <div class="process-step reveal reveal--delay-2"><span>3</span><h4>Desarrollo y entrega</h4></div>
+          <div class="process-step reveal reveal--delay-3"><span>4</span><h4>Activación y uso</h4></div>
+        </div>
+
+        <p class="process__microcopy reveal reveal--delay-3">
+          Te acompañamos en cada paso del proceso. <br />Sin estrés, sin complicaciones.
+        </p>
+      </div>
+    </section>
+
+    <!-- DEMOS (se queda igual) -->
+
+    <!-- CTA FINAL -->
+    <section class="cta reveal">
+      <div class="container">
+        <h2>¿Listos para crear su invitación digital?</h2>
+        <p>Nosotros nos encargamos del orden, tú disfrutas el momento.</p>
+        <a
+          href="javascript:void(0)"
+          class="btn btn--primary"
+          onclick="openWhatsApp()"
+        >
+          Hablemos de tu evento
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer reveal">
+      <div class="container">
+        <p>© Shiny Maker Events</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
+  </body>
+</html>
