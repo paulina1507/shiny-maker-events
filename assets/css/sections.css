@@ -1,16 +1,47 @@
-/* =========================
+/* =====================================================
    HERO
-   ========================= */
+   ===================================================== */
 
 .hero {
   background-color: var(--color-bg-main);
-  padding: 7rem 0 6rem;
+  padding: 8rem 0 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Aura suave tipo editorial */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12%;
+  width: 420px;
+  height: 420px;
+
+  background: radial-gradient(
+    circle,
+    rgba(31, 60, 74, 0.08),
+    transparent 70%
+  );
+
+  transform: translateY(-50%);
+  z-index: 0;
 }
 
 .hero__content {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid hero */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 3.5rem;
 }
 
 .hero__text {
@@ -20,7 +51,7 @@
 .hero h1 {
   font-family: var(--font-title);
   font-size: 3.1rem;
-  line-height: 1.08; /* más editorial */
+  line-height: 1.08;
   letter-spacing: -0.02em;
   margin-bottom: 1.1rem;
 }
@@ -33,68 +64,72 @@
 }
 
 .hero__actions {
+  display: flex;
   gap: 0.9rem;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   PROCESO
-   ========================= */
+/* =====================================================
+   HERO MOCKUP
+   ===================================================== */
 
-.process {
-  background-color: #ffffff;
-  padding: 6rem 0;
+.hero__visual {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -40px; /* acerca el mockup al texto */
 }
 
-.process__steps {
+.mockup-phone {
+  width: 360px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: transparent;
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.18),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+
+  transform: rotate(-4deg);
+}
+
+.mockup-phone img {
+  width: 100%;
+  display: block;
+}
+
+/* =====================================================
+   SECCIONES (¿Qué incluye?)
+   ===================================================== */
+
+.sections__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  margin: 4rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.6rem;
+  margin-top: 3.5rem;
 }
 
-.process-step {
-  text-align: center;
-  padding: 2rem;
+.section-card {
+  background-color: #ffffff;
   border-radius: var(--radius-lg);
-  background-color: var(--color-bg-main);
-}
-
-.process-step span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 42px;
-  height: 42px;
-  margin-bottom: 1rem;
-
-  border-radius: 50%;
-  background-color: var(--color-action);
-  color: #ffffff;
-  font-size: 0.9rem;
-}
-
-.process-step h4 {
-  margin-bottom: 0.6rem;
-  font-size: 1.05rem;
-}
-
-.process-step p {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-}
-
-/* Microcopy */
-.process__microcopy {
+  padding: 2.4rem;
   text-align: center;
-  font-size: 0.95rem;
-  color: var(--color-muted);
-  margin-bottom: 2.5rem;
+  border: 1px solid var(--color-border-soft);
 }
 
-/* =========================
+/* =====================================================
+   PAQUETES
+   ===================================================== */
+
+.packages__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+/* =====================================================
    TABLA COMPARATIVA
-   ========================= */
+   ===================================================== */
 
 .comparison {
   margin-top: 4rem;
@@ -128,23 +163,29 @@
   background-color: var(--color-bg-main);
 }
 
+/* Highlight Experiencia */
+.comparison-table th.highlight,
+.comparison-table td:nth-child(4) {
+  background-color: rgba(31, 60, 74, 0.04);
+  border-left: 1px solid rgba(31, 60, 74, 0.15);
+  border-right: 1px solid rgba(31, 60, 74, 0.15);
+}
+
 .comparison-table th.highlight {
   color: var(--color-action);
   font-weight: 600;
 }
 
-/* Checks */
 .yes {
-  color: #2f7d5a; /* verde elegante */
+  color: #2f7d5a;
   font-weight: 600;
 }
 
 .no {
-  color: #c7c7c7; /* rojo sobrio */
+  color: #c7c7c7;
   font-size: 1.1rem;
 }
 
-/* Nota */
 .comparison-note {
   text-align: center;
   margin-top: 1.5rem;
@@ -152,22 +193,73 @@
   font-size: 0.9rem;
 }
 
-/* =========================
+/* =====================================================
+   PROCESO
+   ===================================================== */
+
+.process {
+  background-color: #ffffff;
+  padding-top: 7.5rem;
+}
+
+.process__steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.process-step {
+  text-align: center;
+  padding: 2.4rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-main);
+}
+
+.process-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-action);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.process-step h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.process__microcopy {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 3rem 0 2.5rem;
+}
+
+/* =====================================================
    DEMOS
-   ========================= */
+   ===================================================== */
+
+.demos {
+  padding-top: 7rem;
+}
 
 .demos__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 .demo-card {
   background-color: #ffffff;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-soft);
-  overflow: hidden;
   transition: var(--transition-base);
 }
 
@@ -176,23 +268,32 @@
   box-shadow: var(--shadow-soft);
 }
 
-/* Preview visual */
 .demo-card__preview {
-  height: 180px;
-  background: linear-gradient(135deg, #f2f1ee, #e9e7e3);
+  height: 260px;
+  margin: 1.2rem;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: top center;
   position: relative;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.demo-preview--esencia {
+  background-image: url("../img/mockups/demo-boda-esencia.jpg");
+}
+
+.demo-preview--experiencia {
+  background-image: url("../img/mockups/demo-boda-experiencia.jpg");
 }
 
 .demo-badge {
   position: absolute;
   top: 1rem;
   left: 1rem;
-
   padding: 0.3rem 0.8rem;
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-
   border-radius: 999px;
   background-color: var(--color-text-main);
   color: #ffffff;
@@ -202,72 +303,22 @@
   background-color: var(--color-action);
 }
 
-/* Contenido */
 .demo-card__content {
   padding: 1.8rem;
 }
 
-.demo-card__content h3 {
-  margin-bottom: 0.4rem;
-}
-
-.demo-card__content p {
-  font-size: 0.9rem;
-  color: var(--color-muted);
-  margin-bottom: 1.4rem;
-}
-
-/* Destacado */
 .demo-card--featured {
   border-color: var(--color-action);
 }
 
-/* =========================
-   RITMO VERTICAL
-   ========================= */
-
-section {
-  padding: 6.5rem 0;
-}
-
-.hero {
-  padding: 8rem 0 7rem;
-}
-
-.packages {
-  padding-bottom: 7.5rem;
-}
-
-.process {
-  padding-top: 7.5rem;
-}
-
-.demos {
-  padding-top: 7rem;
-}
-
-.cta {
-  padding: 7.5rem 0;
-}
-
-/* =========================
-   GRID CONSISTENCY
-   ========================= */
-
-.sections__grid,
-.packages__grid,
-.process__steps,
-.demos__grid {
-  margin-top: 3.5rem;
-}
-
-/* =========================
+/* =====================================================
    CTA FINAL
-   ========================= */
+   ===================================================== */
 
 .cta {
   background-color: #ffffff;
   text-align: center;
+  padding: 7.5rem 0;
 }
 
 .cta h2 {
@@ -277,65 +328,4 @@ section {
 .cta p {
   margin-bottom: 2.5rem;
   color: var(--color-muted);
-}
-
-/* =========================
-   DEMO MOCKUPS
-   ========================= */
-
-.demo-card__preview {
-  height: 260px;
-  border-radius: 20px;
-  margin: 1.2rem;
-  position: relative;
-  overflow: hidden;
-
-  background-size: cover;
-  background-position: top center;
-
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* Esencia */
-.demo-preview--esencia {
-  background-image: url("../img/mockups/demo-boda-esencia.jpg");
-}
-
-/* Experiencia */
-.demo-preview--experiencia {
-  background-image: url("../img/mockups/demo-boda-experiencia.jpg");
-}
-
-/* Ajuste del badge sobre imagen */
-.demo-card__preview .demo-badge {
-  top: 1rem;
-  left: 1rem;
-}
-
-/* =========================
-   TABLA COMPARATIVA — HIGHLIGHT
-   ========================= */
-
-/* Columna Experiencia */
-.comparison-table th.highlight,
-.comparison-table td:nth-child(4) {
-  background-color: rgba(31, 60, 74, 0.04); /* azul petróleo MUY sutil */
-}
-
-/* Header Experiencia */
-.comparison-table th.highlight {
-  color: var(--color-action);
-  font-weight: 600;
-}
-
-/* Borde lateral suave para destacar */
-.comparison-table th.highlight,
-.comparison-table td:nth-child(4) {
-  border-left: 1px solid rgba(31, 60, 74, 0.15);
-  border-right: 1px solid rgba(31, 60, 74, 0.15);
-}
-
-/* Última fila sin borde fuerte */
-.comparison-table tr:last-child td {
-  border-bottom: none;
 }

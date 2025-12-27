@@ -124,3 +124,39 @@
     margin: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-bg {
+    width: 380px;
+    height: 380px;
+    top: -100px;
+    right: -180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero__visual {
+    order: -1; /* mockup arriba */
+  }
+
+  .mockup-phone {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__visual {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .mockup-phone {
+    width: 240px;
+    transform: none;
+  }
+}
