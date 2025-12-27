@@ -6,21 +6,20 @@
   background-color: var(--color-bg-main);
   padding: 8rem 0 7rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
-/* Aura suave tipo editorial */
 .hero::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 12%;
-  width: 420px;
-  height: 420px;
+  right: 8%;
+  width: 480px;
+  height: 480px;
 
   background: radial-gradient(
     circle,
-    rgba(31, 60, 74, 0.08),
+    rgba(31, 60, 74, 0.06),
     transparent 70%
   );
 
@@ -36,12 +35,11 @@
   z-index: 1;
 }
 
-/* Grid hero */
 .hero__grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 3.5rem;
+  gap: 4.5rem;
 }
 
 .hero__text {
@@ -75,22 +73,22 @@
 
 .hero__visual {
   display: flex;
-  justify-content: flex-start;
-  margin-left: -40px; /* acerca el mockup al texto */
+  justify-content: flex-end;
+  align-items: center;
 }
-
 .mockup-phone {
-  width: 360px;
+  width: 440px;
   border-radius: 28px;
   overflow: hidden;
   background: transparent;
 
-  box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.18),
-    0 10px 20px rgba(0, 0, 0, 0.08);
+  transform: translateX(40px) rotate(-4deg);
 
-  transform: rotate(-4deg);
+  box-shadow:
+    0 40px 70px rgba(0, 0, 0, 0.22),
+    0 12px 24px rgba(0, 0, 0, 0.1);
 }
+
 
 .mockup-phone img {
   width: 100%;
