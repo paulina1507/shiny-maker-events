@@ -16,25 +16,23 @@
 
 html {
   width: 100%;
-}
-
-body {
-  width: 100%;
-  overflow-x: hidden; /* 👈 solo aquí */
-  overflow-y: auto;
-  position: relative;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  position: relative;
   font-family: var(--font-body);
-  background-color: var(--color-bg-main);
   color: var(--color-text-main);
   line-height: 1.6;
-  position: relative;
+  background: linear-gradient(
+    180deg,
+    #edcbf6 0%,
+    #f6e9fa 40%,
+    #faf9f7 100%
+  );
 }
 
 /* =========================
