@@ -2,54 +2,205 @@
    RESPONSIVE
    ========================= */
 
+/* =====================================================
+   TABLET / LAPTOP PEQUEÑA
+   ===================================================== */
+
 @media (max-width: 1024px) {
+
   .hero h1 {
     font-size: 2.4rem;
   }
+
+  .hero__lewis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__lewis-visual {
+    height: 420px;
+    margin-top: 4rem;
+  }
 }
+
+/* =====================================================
+   MOBILE & TABLET
+   ===================================================== */
 
 @media (max-width: 768px) {
 
-  /* Header */
+  /* =========================
+     HEADER
+     ========================= */
+
+  .header {
+    padding: 0;
+  }
+
   .header__content {
     flex-wrap: wrap;
-    height: auto;
-    padding: 1rem 0;
+    min-height: 64px;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
   }
 
   .nav {
+    position: absolute;
+    top: 64px;
+    left: 0;
     width: 100%;
-    justify-content: center;
-    margin: 1rem 0;
+    background-color: #ffffff;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid var(--color-border-soft);
+    display: none;
   }
 
-  /* Hero */
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 1rem;
+  }
+
+  .nav-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* =========================
+     HERO BASE
+     ========================= */
+
   .hero {
     padding: 5rem 0 4rem;
   }
 
-  .hero__text {
-    max-width: 100%;
+  .hero h1 {
+    font-size: 2.35rem;
+    line-height: 1.12;
   }
 
-  /* Grids */
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* =========================
+     HERO IMAGE (EDITORIAL)
+     ========================= */
+
+  .hero--image {
+    min-height: 100vh;
+    padding-top: 5rem; /* respira el header */
+  }
+
+  .hero__image-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__image-text {
+    max-width: 92%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero__image-text h1 {
+    font-size: 2.1rem;
+    line-height: 1.15;
+  }
+
+  .hero__image-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero__actions {
+    margin-top: 1.8rem;
+    justify-content: center;
+  }
+
+  .hero--image .btn--primary {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hero__bg img {
+    object-position: center 35%; /* 👈 baja el foco para móvil */
+    transform: scale(1);
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.65)
+    );
+  }
+
+  /* =========================
+     GRIDS
+     ========================= */
+
   .sections__grid,
   .packages__grid,
   .process__steps,
-  .demos__grid {
+  .demos__grid,
+  .hero__grid {
     grid-template-columns: 1fr;
   }
 
-  /* Paquetes */
+  /* =========================
+     MOCKUPS
+     ========================= */
+
+  .hero__visual {
+    justify-content: center;
+  }
+
+  .mockup-phone {
+    width: 260px;
+    transform: none;
+  }
+
+  .lewis-mockup {
+    width: 220px;
+  }
+
+  .lewis-mockup--secondary,
+  .lewis-mockup--third {
+    display: none;
+  }
+
+  /* =========================
+     CARDS / SECTIONS
+     ========================= */
+
   .package-card {
     text-align: center;
   }
 
-  /* Proceso */
   .process-step {
     padding: 1.5rem;
   }
 }
+
+/* =====================================================
+   MOBILE SMALL
+   ===================================================== */
 
 @media (max-width: 480px) {
 
@@ -68,95 +219,31 @@
   .hero__actions {
     flex-direction: column;
   }
-}
 
-@media (max-width: 768px) {
-
-  .nav-toggle {
-    display: flex;
-  }
-
-  .nav {
-    position: absolute;
-    top: 72px;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-
-    padding: 2rem 1.5rem;
-    border-bottom: 1px solid var(--color-border-soft);
-
-    display: none;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .nav a {
-    font-size: 1rem;
-  }
-
-  .nav-cta {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.35rem;
-    line-height: 1.12;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
   .demo-card__preview {
     height: 220px;
     margin: 1rem;
   }
 }
 
-@media (max-width: 768px) {
-  .hero-bg {
-    width: 380px;
-    height: 380px;
-    top: -100px;
-    right: -180px;
+/* =====================================================
+   MOCKUP – MICRO MOVIMIENTO
+   ===================================================== */
+
+.mockup-phone {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) {
+  .mockup-phone:hover {
+    transform: translateY(-6px) rotate(-3deg);
   }
 }
 
 @media (max-width: 768px) {
-  .hero__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__visual {
-    justify-content: center;
-  }
-
-  .mockup-phone {
-    width: 260px;
-    transform: none;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .hero__visual {
-    justify-content: center;
-  }
-
-  .mockup-phone {
-    width: 260px;
-    transform: none;
+  .interactive::after {
+    right: -200px;
+    width: 300px;
+    height: 300px;
   }
 }

@@ -3,22 +3,24 @@
    ========================= */
 
 .btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 
-  padding: 0.9rem 1.8rem;
-  border-radius: var(--radius-md);
-
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
-
   cursor: pointer;
-  transition: var(--transition-base);
-  border: none;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 /* Acción principal */
@@ -26,11 +28,12 @@
   background-color: var(--color-action);
   color: #ffffff;
   box-shadow: var(--shadow-soft);
+  border: none;
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
 }
 
 /* Secundario */
@@ -42,6 +45,7 @@
 
 .btn--secondary:hover {
   background-color: #ffffff;
+  border-color: var(--color-text-main);
 }
 
 /* Outline */
@@ -56,72 +60,122 @@
   color: #ffffff;
 }
 
+/* CTA en navegación */
+.nav-cta {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.85rem;
+}
+
 /* =========================
    BADGES
    ========================= */
 
 .badge {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 999px;
   background-color: var(--color-highlight);
   color: #ffffff;
+  margin-bottom: 0.8rem;
 }
 
 /* =========================
-   CARDS BASE
+   CARDS BASE (REUTILIZABLES)
    ========================= */
 
 .package-card,
 .demo-card,
-.section-card {
+.section-card,
+.trust-item {
   background-color: #ffffff;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-soft);
-  padding: 2rem;
-  transition: var(--transition-base);
+  padding: 2.4rem;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Hover elegante */
 .package-card:hover,
-.demo-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
+.demo-card:hover,
+.section-card:hover,
+.trust-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.1);
 }
 
 /* Card destacada */
 .package-card--featured {
   border-color: var(--color-action);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
 }
 
 /* =========================
-   HOVER FINO
+   TEXTO EN CARDS
    ========================= */
 
-.package-card:hover,
-.demo-card:hover,
-.section-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.1);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-/* =========================
-   ESPACIADO DE CARDS
-   ========================= */
-
-.package-card,
-.demo-card,
-.section-card {
-  padding: 2.4rem;
+.package-card h3,
+.demo-card h3 {
+  margin-bottom: 0.6rem;
 }
 
 .package-card p,
 .demo-card p {
   margin-bottom: 1.6rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* Nota de paquete */
+.package-note {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 1.4rem;
+}
+
+/* =========================
+   TRUST SECTION
+   ========================= */
+
+/* Contenedor individual */
+.trust-item {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  padding: 2rem 1.5rem;
+}
+
+/* Preparado para iconos SVG */
+.trust-item .trust-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(31, 60, 74, 0.08);
+  color: var(--color-action);
+  font-size: 1.2rem;
+}
+
+/* =========================
+   INTERACCIONES FINAS
+   ========================= */
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-action);
+  outline-offset: 3px;
 }

@@ -1,102 +1,150 @@
 /* =====================================================
-   HERO
+   HERO BASE
    ===================================================== */
 
 .hero {
   background-color: var(--color-bg-main);
   padding: 8rem 0 7rem;
   position: relative;
-  overflow: visible;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 8%;
-  width: 480px;
-  height: 480px;
-
-  background: radial-gradient(
-    circle,
-    rgba(31, 60, 74, 0.06),
-    transparent 70%
-  );
-
-  transform: translateY(-50%);
-  z-index: 0;
+  overflow: hidden;
 }
 
 .hero__content {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
   position: relative;
-  z-index: 1;
-}
-
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: center;
-  gap: 4.5rem;
-}
-
-.hero__text {
-  max-width: 720px;
-}
-
-.hero h1 {
-  font-family: var(--font-title);
-  font-size: 3.1rem;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.1rem;
-}
-
-.hero p {
-  font-size: 1.05rem;
-  line-height: 1.65;
-  color: var(--color-muted);
-  margin-bottom: 2.2rem;
-}
-
-.hero__actions {
-  display: flex;
-  gap: 0.9rem;
-  flex-wrap: wrap;
+  z-index: 3;
 }
 
 /* =====================================================
-   HERO MOCKUP
+   HERO EDITORIAL CON IMAGEN
    ===================================================== */
 
-.hero__visual {
+.hero--image {
+  position: relative;
+  min-height: calc(100vh - 72px); /* header-aware */
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-}
-.mockup-phone {
-  width: 440px;
-  border-radius: 28px;
+  padding-top: 2.5rem;
   overflow: hidden;
-  background: transparent;
-
-  transform: translateX(40px) rotate(-4deg);
-
-  box-shadow:
-    0 40px 70px rgba(0, 0, 0, 0.22),
-    0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* Fondo */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
 
-.mockup-phone img {
+.hero__bg img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%; /* desktop focal point */
+
+  /* Entrada suave */
+  transform: scale(1.08);
+  opacity: 0;
+  transition:
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.2s ease;
+
+  will-change: transform, opacity;
+}
+
+/* Imagen visible */
+.hero.is-visible .hero__bg img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Overlay elegante */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.55)
+  );
 }
 
 /* =====================================================
-   SECCIONES (¿Qué incluye?)
+   CONTENIDO HERO
+   ===================================================== */
+
+.hero__image-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero__image-text {
+  max-width: 520px;
+  color: #ffffff;
+}
+
+.hero__image-text h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.hero__image-text p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* CTA sobre imagen */
+.hero--image .btn--primary {
+  background-color: var(--color-action);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.hero--image .btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.35);
+}
+
+/* =====================================================
+   HERO FADE ON SCROLL
+   ===================================================== */
+
+.hero__bg,
+.hero__overlay,
+.hero__image-text {
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.hero.is-fading .hero__bg,
+.hero.is-fading .hero__overlay {
+  opacity: 0.85;
+}
+
+.hero.is-fading .hero__image-text {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* =====================================================
+   SEPARADOR HERO → CONTENIDO
+   ===================================================== */
+
+.hero-divider {
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.06),
+    rgba(0,0,0,0)
+  );
+}
+
+/* =====================================================
+   SECCIONES (QUÉ INCLUYE)
    ===================================================== */
 
 .sections__grid {
@@ -113,6 +161,55 @@
   text-align: center;
   border: 1px solid var(--color-border-soft);
 }
+
+/* =====================================================
+   INVITACIÓN INTERACTIVA
+   ===================================================== */
+
+.interactive {
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive__list {
+  list-style: none;
+  margin-top: 2.5rem;
+  padding: 0;
+}
+
+.interactive__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.feature-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.interactive::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 420px;
+  height: 420px;
+  background: url("/assets/svg/floral-outline.svg") no-repeat center;
+  background-size: contain;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
 
 /* =====================================================
    PAQUETES
@@ -154,42 +251,19 @@
 .comparison-table th:first-child,
 .comparison-table td:first-child {
   text-align: left;
-  font-weight: 500;
 }
 
 .comparison-table thead {
   background-color: var(--color-bg-main);
 }
 
-/* Highlight Experiencia */
 .comparison-table th.highlight,
 .comparison-table td:nth-child(4) {
   background-color: rgba(31, 60, 74, 0.04);
-  border-left: 1px solid rgba(31, 60, 74, 0.15);
-  border-right: 1px solid rgba(31, 60, 74, 0.15);
 }
 
-.comparison-table th.highlight {
-  color: var(--color-action);
-  font-weight: 600;
-}
-
-.yes {
-  color: #2f7d5a;
-  font-weight: 600;
-}
-
-.no {
-  color: #c7c7c7;
-  font-size: 1.1rem;
-}
-
-.comparison-note {
-  text-align: center;
-  margin-top: 1.5rem;
-  color: var(--color-muted);
-  font-size: 0.9rem;
-}
+.yes { color: #2f7d5a; font-weight: 600; }
+.no  { color: #c7c7c7; }
 
 /* =====================================================
    PROCESO
@@ -212,31 +286,6 @@
   padding: 2.4rem;
   border-radius: var(--radius-lg);
   background-color: var(--color-bg-main);
-}
-
-.process-step span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 1rem;
-  border-radius: 50%;
-  background-color: var(--color-action);
-  color: #ffffff;
-  font-size: 0.9rem;
-}
-
-.process-step h4 {
-  margin-bottom: 0.6rem;
-  font-size: 1.05rem;
-}
-
-.process__microcopy {
-  text-align: center;
-  font-size: 0.95rem;
-  color: var(--color-muted);
-  margin: 3rem 0 2.5rem;
 }
 
 /* =====================================================
@@ -272,41 +321,6 @@
   border-radius: 20px;
   background-size: cover;
   background-position: top center;
-  position: relative;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
-}
-
-.demo-preview--esencia {
-  background-image: url("../img/mockups/demo-boda-esencia.jpg");
-}
-
-.demo-preview--experiencia {
-  background-image: url("../img/mockups/demo-boda-experiencia.jpg");
-}
-
-.demo-badge {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  padding: 0.3rem 0.8rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border-radius: 999px;
-  background-color: var(--color-text-main);
-  color: #ffffff;
-}
-
-.demo-badge--featured {
-  background-color: var(--color-action);
-}
-
-.demo-card__content {
-  padding: 1.8rem;
-}
-
-.demo-card--featured {
-  border-color: var(--color-action);
 }
 
 /* =====================================================
@@ -319,11 +333,31 @@
   padding: 7.5rem 0;
 }
 
-.cta h2 {
-  margin-bottom: 1rem;
+/* =====================================================
+   ANIMACIONES AVANZADAS
+   ===================================================== */
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.cta p {
-  margin-bottom: 2.5rem;
-  color: var(--color-muted);
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: none;
 }
