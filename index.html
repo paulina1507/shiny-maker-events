@@ -68,7 +68,7 @@
     <section id="inicio" class="hero hero--image">
       <div class="hero__bg">
         <img
-          src="/assets/img/hero.png"
+          src="assets/img/hero.png"
           alt="Invitaciones digitales elegantes"
           loading="eager"
         />
@@ -102,49 +102,92 @@
     <!-- INVITACIÓN INTERACTIVA -->
     <section id="interactiva" class="interactive">
       <div class="container interactive__grid">
+        <!-- TEXTO / BENEFICIOS -->
         <div class="interactive__features reveal-left">
-          <h2>Invitación interactiva</h2>
+          <h2>Invitaciones que se viven</h2>
+
           <p class="section__intro">
-            Una invitación moderna que tus invitados pueden abrir desde su
-            celular, sin descargar nada.
+            Tus invitados abren la invitación desde su celular y descubren cada
+            detalle en un solo lugar, sin descargar aplicaciones.
           </p>
 
           <ul class="interactive__list">
             <li class="reveal reveal--d1">
               <span class="feature-icon">🎵</span>
-              Canción favorita
+              Una canción que los acompaña desde el primer momento
             </li>
             <li class="reveal reveal--d2">
               <span class="feature-icon">⏳</span>
-              Cuenta regresiva
+              Cuenta regresiva al gran día
             </li>
             <li class="reveal reveal--d3">
               <span class="feature-icon">🖼</span>
-              Galería de fotos
+              Galería con sus mejores recuerdos
             </li>
             <li class="reveal reveal--d4">
               <span class="feature-icon">📍</span>
-              Ubicación con mapas
+              Ubicación exacta sin confusiones
             </li>
             <li class="reveal reveal--d5">
               <span class="feature-icon">✅</span>
-              Confirmación de asistencia
+              Confirmación de asistencia en segundos
             </li>
           </ul>
+
+          <p class="interactive__note">
+            Funciona en cualquier celular · Fácil de compartir · Sin apps
+          </p>
+
+          <a
+            href="javascript:void(0)"
+            class="btn btn--primary"
+            onclick="openWhatsApp()"
+          >
+            Quiero una invitación así
+          </a>
+        </div>
+
+        <!-- VIDEO / DEMO -->
+        <div class="interactive__media reveal-right">
+          <div class="interactive__video-wrapper">
+            <video
+              class="interactive__video"
+              src="assets/video/invitacion-demo.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/img/video-poster.jpg"
+            ></video>
+
+            <span class="interactive__video-label">
+              Así se verá tu invitación
+            </span>
+          </div>
         </div>
       </div>
     </section>
-
+    
     <section class="cta reveal-scale">
       <div class="container">
         <h2>Tu evento merece algo especial</h2>
-        <p>Una invitación que tus invitados van a recordar.</p>
+
+        <p class="cta__text">
+          Diseñamos invitaciones digitales elegantes que se comparten fácilmente
+          y se viven desde el primer momento.
+        </p>
+
+        <div class="cta__trust">
+          Funciona en cualquier celular · Sin apps · Entrega rápida
+        </div>
+
         <a
           href="javascript:void(0)"
           class="btn btn--primary"
           onclick="openWhatsApp()"
         >
-          Quiero mi invitación
+          Cotizar mi invitación
         </a>
       </div>
     </section>
@@ -153,6 +196,10 @@
     <section id="paquetes" class="packages">
       <div class="container">
         <h2 class="reveal">Paquetes disponibles</h2>
+
+        <p class="section__intro reveal">
+          Elige el nivel de experiencia ideal para tu evento
+        </p>
 
         <div class="packages__grid">
           <article class="package-card reveal reveal--d1">
@@ -163,7 +210,7 @@
               class="btn btn--outline"
               onclick="openWhatsApp('esencia')"
             >
-              Cotizar
+              Cotizar Esencia
             </a>
           </article>
 
@@ -175,7 +222,7 @@
               class="btn btn--outline"
               onclick="openWhatsApp('armonia')"
             >
-              Cotizar
+              Cotizar Armonía
             </a>
           </article>
 
@@ -190,12 +237,22 @@
               class="btn btn--primary"
               onclick="openWhatsApp('experiencia')"
             >
-              Cotizar ahora
+              Quiero Experiencia
             </a>
           </article>
         </div>
+      </div>
+    </section>
 
-        <!-- TABLA -->
+    <!-- COMPARACIÓN DE PAQUETES -->
+    <section id="comparacion" class="comparison-section">
+      <div class="container">
+        <h2 class="reveal">Comparación de funcionalidades</h2>
+
+        <p class="section__intro reveal">
+          Descubre qué incluye cada paquete y elige con confianza
+        </p>
+
         <div class="comparison reveal reveal--delay-2">
           <table class="comparison-table">
             <thead>
@@ -216,57 +273,58 @@
 
               <tr>
                 <td data-label="Funcionalidad">Confirmación de asistencia</td>
-                <td data-label="Esencia" class="yes">✔</td>
-                <td data-label="Armonía" class="yes">✔</td>
-                <td data-label="Experiencia" class="yes">✔</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
               </tr>
 
               <tr>
                 <td data-label="Funcionalidad">Música automática</td>
-                <td data-label="Esencia" class="yes">✔</td>
-                <td data-label="Armonía" class="yes">✔</td>
-                <td data-label="Experiencia" class="yes">✔</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
               </tr>
 
               <tr>
                 <td data-label="Funcionalidad">Panel de invitados</td>
-                <td data-label="Esencia" class="no">✕</td>
-                <td data-label="Armonía" class="yes">✔</td>
-                <td data-label="Experiencia" class="yes">✔</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
               </tr>
 
               <tr>
                 <td data-label="Funcionalidad">Pases por invitado</td>
-                <td data-label="Esencia" class="no">✕</td>
-                <td data-label="Armonía" class="yes">✔</td>
-                <td data-label="Experiencia" class="yes">✔</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
               </tr>
 
               <tr>
                 <td data-label="Funcionalidad">Mesas asignadas</td>
-                <td data-label="Esencia" class="no">✕</td>
-                <td data-label="Armonía" class="yes">✔</td>
-                <td data-label="Experiencia" class="yes">✔</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
               </tr>
 
               <tr>
                 <td data-label="Funcionalidad">Pase digital</td>
-                <td data-label="Esencia" class="no">✕</td>
-                <td data-label="Armonía" class="yes">✔</td>
-                <td data-label="Experiencia" class="yes">✔</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
+                <td class="yes">✔</td>
               </tr>
 
               <tr>
                 <td data-label="Funcionalidad">QR personalizado</td>
-                <td data-label="Esencia" class="no">✕</td>
-                <td data-label="Armonía" class="no">✕</td>
-                <td data-label="Experiencia" class="yes">✔</td>
+                <td class="no">✕</td>
+                <td class="no">✕</td>
+                <td class="yes">✔</td>
               </tr>
             </tbody>
           </table>
 
           <p class="comparison-note">
-            Elige el nivel de experiencia ideal para tu evento.
+            El paquete <strong>Experiencia</strong> ofrece el mayor nivel de
+            control y personalización.
           </p>
         </div>
       </div>
@@ -277,20 +335,50 @@
       <div class="container">
         <h2 class="reveal">Ejemplos de invitaciones</h2>
 
+        <p class="section__intro reveal">
+          Explora algunos estilos reales de invitaciones digitales
+        </p>
+
         <div class="demos__grid">
+          <!-- DEMO ESENCIA -->
           <article class="demo-card reveal reveal--d1">
-            <div class="demo-card__preview demo-preview--esencia"></div>
+            <div class="demo-card__preview demo-preview--esencia">
+              <span class="demo-badge">Demo real</span>
+              <div class="demo-overlay">
+                <a
+                  href="javascript:void(0)"
+                  class="btn btn--primary btn--small"
+                  onclick="openWhatsApp('demo-esencia')"
+                >
+                  Ver demo
+                </a>
+              </div>
+            </div>
+
             <div class="demo-card__content">
               <h3>Esencia</h3>
-              <p>Bodas y eventos íntimos</p>
+              <p>Minimalista, elegante y fácil de compartir</p>
             </div>
           </article>
 
+          <!-- DEMO EXPERIENCIA -->
           <article class="demo-card demo-card--featured reveal reveal--d2">
-            <div class="demo-card__preview demo-preview--experiencia"></div>
+            <div class="demo-card__preview demo-preview--experiencia">
+              <span class="demo-badge">Demo real</span>
+              <div class="demo-overlay">
+                <a
+                  href="javascript:void(0)"
+                  class="btn btn--primary btn--small"
+                  onclick="openWhatsApp('demo-experiencia')"
+                >
+                  Ver demo
+                </a>
+              </div>
+            </div>
+
             <div class="demo-card__content">
               <h3>Experiencia</h3>
-              <p>Eventos grandes y personalizados</p>
+              <p>Impactante, interactiva y totalmente personalizada</p>
             </div>
           </article>
         </div>
@@ -298,36 +386,47 @@
     </section>
 
     <footer class="footer">
-      <div class="container footer__content">
-        <div class="footer__brand">
-          <h3>Shiny Maker Events</h3>
-          <p>
-            Invitaciones digitales elegantes para bodas, XV años y momentos
-            especiales.
-          </p>
+      <div class="container">
+        <!-- Línea decorativa -->
+        <div class="footer__divider"></div>
+
+        <div class="footer__content">
+          <!-- Marca -->
+          <div class="footer__brand">
+            <h3>Shiny Maker Events</h3>
+            <p class="footer__description">
+              Invitaciones digitales elegantes para bodas, XV años y momentos
+              especiales.
+            </p>
+            <p class="footer__trust">
+              Diseño personalizado · Soporte durante tu evento
+            </p>
+          </div>
+
+          <!-- Navegación -->
+          <nav class="footer__links">
+            <a href="#inicio">Inicio</a>
+            <a href="#interactiva">Invitación</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#demos">Demos</a>
+          </nav>
+
+          <!-- CTA -->
+          <div class="footer__cta">
+            <p class="footer__cta-text">¿Listos para crear algo especial?</p>
+            <a
+              href="javascript:void(0)"
+              class="btn btn--primary"
+              onclick="openWhatsApp()"
+            >
+              Cotizar mi invitación
+            </a>
+          </div>
         </div>
 
-        <div class="footer__links">
-          <a href="#inicio">Inicio</a>
-          <a href="#interactiva">Invitación</a>
-          <a href="#paquetes">Paquetes</a>
-          <a href="#demos">Demos</a>
+        <div class="footer__bottom">
+          © Shiny Maker Events · Invitaciones digitales elegantes
         </div>
-
-        <div class="footer__cta">
-          <p>¿Listos para crear algo especial?</p>
-          <a
-            href="javascript:void(0)"
-            class="btn btn--primary"
-            onclick="openWhatsApp()"
-          >
-            Cotizar por WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        © Shiny Maker Events · Invitaciones digitales elegantes
       </div>
     </footer>
 
