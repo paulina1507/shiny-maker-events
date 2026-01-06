@@ -7,7 +7,6 @@
    ===================================================== */
 
 @media (max-width: 1024px) {
-
   .hero h1 {
     font-size: 2.4rem;
   }
@@ -28,7 +27,6 @@
    ===================================================== */
 
 @media (max-width: 768px) {
-
   /* =========================
      HEADER
      ========================= */
@@ -155,13 +153,53 @@
      ========================= */
 
   .interactive__video-wrapper {
-    max-width: 320px;
+    max-width: 240px;
     margin: 0 auto;
   }
 
   .interactive__video-label {
     font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
+
+  .interactive h2 {
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+  }
+
+  .section__intro {
+    max-width: 520px;
+    line-height: 1.7;
+  }
+
+  .interactive__list li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .feature-icon {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+
+  @media (hover: hover) {
+  .interactive__video-wrapper:hover {
+    transform: translateY(-6px);
+  }
+}
+
+
+.interactive .btn--primary {
+  margin-top: 1.8rem;
+}
+
+.interactive .btn--primary::after {
+  content: " ↗";
+  opacity: 0.6;
+}
 
   /* =========================
      COMPARACIÓN – TABLA SIN SCROLL
@@ -255,7 +293,6 @@
    ===================================================== */
 
 @media (max-width: 480px) {
-
   h1 {
     font-size: 2rem;
   }

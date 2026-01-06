@@ -42,9 +42,7 @@
   object-position: center 20%;
   transform: scale(1.08);
   opacity: 0;
-  transition:
-    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 1.2s ease;
+  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease;
 }
 
 .hero.is-visible .hero__bg img {
@@ -59,8 +57,8 @@
   z-index: 2;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.55)
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.55)
   );
 }
 
@@ -94,13 +92,13 @@
 .hero--image .btn--primary {
   background-color: var(--color-action);
   color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.25);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
 .hero--image .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 28px 60px rgba(0,0,0,0.35);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
 }
 
 /* =====================================================
@@ -182,14 +180,28 @@
 }
 
 .feature-icon {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  opacity: 0.85;
+
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
+
+.feature-icon img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  opacity: 0.9;
+}
+
 
 .interactive__note {
   margin-top: 1.6rem;
@@ -210,17 +222,17 @@
 .interactive__video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 420px;           /* 👈 más grande */
-  aspect-ratio: 9 / 19;       /* formato celular */
+  max-width: 280px;
+  aspect-ratio: 9 / 19;
   margin-left: auto;
-
-  background-color: #000;
+  background: linear-gradient(to bottom, #111, #000);
   border-radius: 44px;
   padding: 0.7rem;
 
   box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.35),
-    0 0 0 10px rgba(255, 255, 255, 0.15);
+  0 30px 80px rgba(0,0,0,0.25),
+  0 0 0 6px rgba(255,255,255,0.12);
+
 }
 
 .interactive__video {
@@ -340,11 +352,16 @@
 
 .comparison-table th.highlight,
 .comparison-table td:nth-child(4) {
-  background-color: rgba(31,60,74,0.04);
+  background-color: rgba(31, 60, 74, 0.04);
 }
 
-.yes { color: #2f7d5a; font-weight: 600; }
-.no  { color: #c7c7c7; }
+.yes {
+  color: #2f7d5a;
+  font-weight: 600;
+}
+.no {
+  color: #c7c7c7;
+}
 
 /* =====================================================
    DEMOS
