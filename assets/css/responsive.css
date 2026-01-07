@@ -152,10 +152,6 @@
      INVITACIÓN INTERACTIVA
      ========================= */
 
-  .interactive__video-wrapper {
-    max-width: 240px;
-    margin: 0 auto;
-  }
 
   .interactive__video-label {
     font-size: 0.65rem;
@@ -319,3 +315,13 @@
     transform: translateY(-6px) rotate(-3deg);
   }
 }
+
+@media (max-width: 768px) {
+  .interactive__video-wrapper {
+    max-width: 260px;
+
+    /* 👇 un poco más que antes */
+    padding: 1.1rem 0.55rem;
+  }
+}
+

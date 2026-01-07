@@ -3,7 +3,7 @@
    ====================================== */
 
 /* CONFIGURACIÓN */
-const WHATSAPP_NUMBER = "2212706617"; 
+const WHATSAPP_NUMBER = "2212576641"; 
 // Ejemplo México: 5215512345678
 
 /* MENSAJES */

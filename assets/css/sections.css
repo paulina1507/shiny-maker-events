@@ -221,26 +221,23 @@
 
 .interactive__video-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 280px;
-  aspect-ratio: 9 / 19;
-  margin-left: auto;
-  background: linear-gradient(to bottom, #111, #000);
-  border-radius: 44px;
-  padding: 0.7rem;
+  max-width: 300px;
+  border-radius: 36px;
+  background-color: #000;
+
+  /* 👇 MÁS AIRE INTERNO (ANTES: 1.1rem 0.6rem) */
+  padding: 1.2rem 0.9rem;
 
   box-shadow:
-  0 30px 80px rgba(0,0,0,0.25),
-  0 0 0 6px rgba(255,255,255,0.12);
-
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 6px rgba(255,255,255,0.12);
 }
+
 
 .interactive__video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 36px;
   display: block;
+  border-radius: 28px; /* un poco menor que el wrapper */
 }
 
 /* Etiqueta flotante */
@@ -278,6 +275,19 @@
   opacity: 0.06;
   pointer-events: none;
 }
+
+.interactive__video-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: rgba(255,255,255,0.22);
+  border-radius: 999px;
+}
+
 
 /* =====================================================
    CTA
