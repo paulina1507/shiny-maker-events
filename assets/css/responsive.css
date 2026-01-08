@@ -192,51 +192,6 @@
   opacity: 0.6;
 }
 
-  /* =========================
-     COMPARACIÓN – TABLA SIN SCROLL
-     ========================= */
-
-  .comparison {
-    overflow: visible;
-  }
-
-  .comparison-table {
-    width: 100%;
-    min-width: unset;
-    table-layout: fixed;
-  }
-
-  .comparison-table th,
-  .comparison-table td {
-    padding: 0.5rem 0.45rem;
-    font-size: 0.75rem;
-    text-align: center;
-  }
-
-  .comparison-table th:first-child,
-  .comparison-table td:first-child {
-    width: 42%;
-    text-align: left;
-    white-space: normal;
-    line-height: 1.2;
-  }
-
-  .comparison-table th:not(:first-child),
-  .comparison-table td:not(:first-child) {
-    width: 19%;
-  }
-
-  .comparison-table .yes,
-  .comparison-table .no {
-    font-size: 0.8rem;
-  }
-
-  .comparison-note {
-    font-size: 0.75rem;
-    text-align: center;
-    margin-top: 0.8rem;
-  }
-
   @media (max-width: 1200px) {
   .process__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -347,6 +302,81 @@
 
     /* 👇 un poco más que antes */
     padding: 1.1rem 0.55rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Oculta encabezado tradicional */
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .comparison-table tr {
+    background: #ffffff;
+    border-radius: 14px;
+    margin-bottom: 1.2rem;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  }
+
+  /* Funcionalidad */
+  .comparison-table td:first-child {
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Columnas como filas */
+  .comparison-table td:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    border-top: 1px dashed var(--color-border-soft);
+  }
+
+  /* Etiquetas antes de cada valor */
+  .comparison-table td:nth-child(2)::before {
+    content: "Esencia";
+  }
+
+  .comparison-table td:nth-child(3)::before {
+    content: "Armonía";
+  }
+
+  .comparison-table td:nth-child(4)::before {
+    content: "Experiencia";
+    font-weight: 600;
+    color: var(--color-action);
+  }
+
+  .comparison-table td::before {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+
+  /* Íconos más claros */
+  .comparison-table .yes {
+    font-size: 1rem;
+  }
+
+  .comparison-table .no {
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .packages-compare__grid {
+    grid-template-columns: 1fr;
   }
 }
 
