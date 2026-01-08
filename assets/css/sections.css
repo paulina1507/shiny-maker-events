@@ -137,7 +137,50 @@
   border-radius: var(--radius-lg);
   padding: 2.4rem;
   text-align: center;
-  border: 1px solid var(--color-border-soft);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow:
+  0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.package-card--featured {
+  border: 1px solid rgba(31, 60, 74, 0.35);
+  animation: featuredFloat 6s ease-in-out infinite;
+}
+
+.package-card,
+.process-step,
+.section-card {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(2px);
+}
+
+.package-card:hover,
+.process-step:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 26px 60px rgba(0, 0, 0, 0.12);
+}
+
+.package-card::before,
+.process-step::before,
+.section-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+.package-card::before,
+.process-step::before,
+.section-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  pointer-events: none;
 }
 
 /* =====================================================
@@ -293,21 +336,72 @@
    CTA
    ===================================================== */
 
+/* =====================================================
+   CTA CON IMAGEN DE FONDO
+   ===================================================== */
+
 .cta {
-  background-color: #ffffff;
+  position: relative;
+  padding: 8rem 0;
   text-align: center;
-  padding: 7.5rem 0;
+  overflow: hidden;
+
+  /* Imagen de fondo */
+  background-image: url("../img/cta.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay elegante para legibilidad */
+.cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 1;
+}
+
+/* Contenido encima del overlay */
+.cta__content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+/* Ajustes de texto */
+.cta h2 {
+  font-size: clamp(2.4rem, 5vw, 3.2rem); 
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.02em;
 }
 
 .cta__text {
-  max-width: 520px;
-  margin: 0 auto 1.2rem;
+  max-width: 600px; 
+  margin: 0 auto 1.8rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
 }
 
 .cta__trust {
-  font-size: 0.8rem;
-  color: var(--color-muted);
+  font-size: 0.85rem;
+  opacity: 0.85;
   margin-bottom: 2rem;
+}
+
+.cta .btn--primary {
+  padding: 1rem 2.6rem; /* ⬅️ más grande */
+  font-size: 1rem;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.4);
+}
+
+.cta .btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.5);
 }
 
 /* =====================================================
@@ -334,13 +428,20 @@
   overflow-x: auto;
 }
 
+/* =========================
+   TABLA BASE
+   ========================= */
+
 .comparison-table {
-  min-width: 640px;
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
+}
+
+.comparison-table thead {
+  background-color: var(--color-bg-main);
 }
 
 .comparison-table th,
@@ -354,124 +455,196 @@
 .comparison-table th:first-child,
 .comparison-table td:first-child {
   text-align: left;
+  white-space: normal;
 }
 
-.comparison-table thead {
-  background-color: var(--color-bg-main);
+/* =========================
+   RESALTADO EXPERIENCIA
+   ========================= */
+
+/* Encabezado Experiencia */
+.comparison-table th.highlight {
+  background-color: rgba(31, 60, 74, 0.08);
+  font-weight: 600;
+  position: relative;
+}
+
+/* Etiqueta sutil */
+.comparison-table th.highlight::after {
+  content: "Más elegido";
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background-color: rgba(31, 60, 74, 0.15);
+  color: #1f3c4a;
+  vertical-align: middle;
+}
+
+/* Columna completa Experiencia */
+.comparison-table td:nth-child(4),
+.comparison-table th:nth-child(4) {
+  background-color: rgba(31, 60, 74, 0.04);
+  box-shadow:
+    inset 2px 0 0 rgba(31, 60, 74, 0.15),
+    inset -2px 0 0 rgba(31, 60, 74, 0.15);
 }
 
 .comparison-table th.highlight,
 .comparison-table td:nth-child(4) {
-  background-color: rgba(31, 60, 74, 0.04);
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 60, 74, 0.04),
+    rgba(31, 60, 74, 0.02)
+  );
+  border-left: 2px solid rgba(31, 60, 74, 0.12);
+  border-right: 2px solid rgba(31, 60, 74, 0.12);
 }
+
+/* Checks de Experiencia más definidos */
+.comparison-table td:nth-child(4).yes {
+  color: #1f3c4a;
+  font-weight: 700;
+}
+
+/* =========================
+   ESTADOS
+   ========================= */
 
 .yes {
   color: #2f7d5a;
   font-weight: 600;
 }
+
+.comparison-table td:nth-child(4).yes {
+  color: #1f3c4a;
+  font-weight: 700;
+}
+
 .no {
   color: #c7c7c7;
 }
 
-/* =====================================================
-   DEMOS
-   ===================================================== */
+/* =========================
+   NOTA
+   ========================= */
 
-.demos {
-  padding-top: 7rem;
-}
-
-.demos__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3.5rem;
-}
-
-/* -------------------------
-   CARD BASE
-   ------------------------- */
-
-.demo-card {
-  background-color: #ffffff;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-soft);
-  transition: var(--transition-base);
-  overflow: hidden;
-}
-
-.demo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-soft);
-}
-
-/* -------------------------
-   PREVIEW
-   ------------------------- */
-
-.demo-card__preview {
-  position: relative;
-  height: 260px;
-  margin: 1.2rem;
-  border-radius: 20px;
-  background-size: cover;
-  background-position: top center;
-  overflow: hidden;
-}
-
-/* -------------------------
-   BADGE "DEMO REAL"
-   ------------------------- */
-
-.demo-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: rgba(255, 255, 255, 0.9);
-  font-size: 0.65rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 999px;
-  z-index: 2;
-  color: var(--color-text-main);
-}
-
-/* -------------------------
-   OVERLAY + CTA
-   ------------------------- */
-
-.demo-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-.demo-card:hover .demo-overlay {
-  opacity: 1;
-}
-
-/* Botón pequeño */
-.btn--small {
-  padding: 0.6rem 1.2rem;
-  font-size: 0.8rem;
-}
-
-/* -------------------------
-   CONTENIDO
-   ------------------------- */
-
-.demo-card__content {
-  padding: 0 1.4rem 1.6rem;
+.comparison-note {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
   text-align: center;
 }
 
-.demo-card__content p {
-  font-size: 0.9rem;
-  color: var(--color-muted);
+/* =========================
+   PROCESO DE COMPRA
+   ========================= */
+
+.process {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    var(--color-bg-soft) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.process h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.process .section__intro {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 3.5rem;
+  color: var(--color-text-soft);
+}
+
+/* GRID */
+.process__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* PASO */
+.process-step {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem 2.4rem;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* NÚMERO */
+.process-step__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(160, 120, 255, 0.15),
+    rgba(160, 120, 255, 0.05)
+  );
+  border: 1px solid rgba(160, 120, 255, 0.25);
+}
+
+/* TÍTULO */
+.process-step h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+/* TEXTO */
+.process-step p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-soft);
+}
+
+/* CTA */
+.process__cta {
+  display: flex;
+  justify-content: center;
+}
+
+.process::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  opacity: 0.35;
+  animation: paperDrift 30s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes paperDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200px 200px;
+  }
 }
 
 /* =====================================================
@@ -586,4 +759,33 @@
 .reveal-scale.is-visible {
   opacity: 1;
   transform: none;
+}
+
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-stagger.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* delays elegantes */
+.reveal--d1 { transition-delay: 0.05s; }
+.reveal--d2 { transition-delay: 0.15s; }
+.reveal--d3 { transition-delay: 0.25s; }
+.reveal--d4 { transition-delay: 0.35s; }
+.reveal--d5 { transition-delay: 0.45s; }
+
+@keyframes featuredFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }

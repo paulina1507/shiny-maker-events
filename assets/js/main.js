@@ -22,7 +22,7 @@ document.querySelectorAll('.nav a').forEach(link => {
 
 // Revelado de elementos (incluye variantes)
 const revealEls = document.querySelectorAll(
-  '.reveal, .reveal-left, .reveal-right, .reveal-scale'
+  '.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -52,16 +52,6 @@ window.addEventListener('scroll', () => {
     item.style.transform = `translateY(${yPos * -0.15}px)`;
   });
 });
-
-// HERO IMAGE PARALLAX (MUY SUAVE)
-const heroBg = document.querySelector('.hero__bg img');
-
-if (heroBg) {
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY * 0.12;
-    heroBg.style.transform = `translateY(${y}px)`;
-  });
-}
 
 // ============================================
 // HEADER SCROLL EFFECT
