@@ -98,6 +98,8 @@
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  font-size: 1.05rem;
+  padding: 1rem 2.4rem;
 }
 
 .hero--image .btn--primary:hover {
@@ -465,7 +467,7 @@
 }
 
 .compare-card li {
-  padding: 0.5rem 0;
+  padding: 0.45rem 0;
   font-size: 0.9rem;
   display: flex;
   justify-content: space-between;
@@ -528,7 +530,7 @@
   content: "✕";
   width: 22px;
   height: 22px;
-
+  opacity: 0.3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -599,7 +601,7 @@
 }
 
 .process .section__intro {
-  max-width: 640px; 
+  max-width: 640px;
   margin: 1rem 0 3.5rem;
   text-align: left;
   color: var(--color-text-soft);
@@ -649,6 +651,11 @@
 .process-step:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
+}
+
+.process-step:first-child,
+.process-step:last-child {
+  transform: scale(1.02);
 }
 
 /* NÚMERO */
@@ -815,7 +822,7 @@
 
 .footer__description {
   font-size: 0.85rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
 }
 
