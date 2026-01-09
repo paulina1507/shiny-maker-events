@@ -1,4 +1,7 @@
 :root {
+  --font-title: "Playfair Display", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-hero: "Fredericka the Great", serif;
   /* Colores base */
   --color-bg-main: #faf9f7;
   --color-text-main: #2e2e2e;
@@ -12,8 +15,8 @@
   --color-highlight: #c8bfae;
 
   /* Tipografías */
-  --font-title: 'Playfair Display', serif;
-  --font-body: 'Montserrat', sans-serif;
+  --font-title: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
 
   /* Layout */
   --container-width: 1200px;
@@ -21,7 +24,7 @@
   --radius-md: 10px;
 
   /* Sombras */
-  --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
 
   /* Transiciones */
   --transition-base: all 0.3s ease;

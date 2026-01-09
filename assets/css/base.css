@@ -165,12 +165,20 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+  font-family: var(--font-title);
+  font-size: clamp(2.1rem, 4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.8rem;
+  color: var(--color-text-main);
 }
 
 h3 {
-  margin-bottom: 0.6rem;
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 p {
@@ -179,9 +187,10 @@ p {
 
 /* Texto introductorio */
 .section__intro {
-  max-width: 640px;
-  margin-bottom: 3.5rem;
-  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-soft);
 }
 
 /* =========================

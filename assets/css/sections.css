@@ -14,6 +14,14 @@
   z-index: 3;
 }
 
+.hero__image-text h1 {
+  font-family: var(--font-hero);
+  font-size: clamp(2.8rem, 6vw, 3.6rem);
+  font-weight: 400; /* Fredericka solo se ve bien en regular */
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+
 /* =====================================================
    HERO EDITORIAL CON IMAGEN
    ===================================================== */
@@ -80,12 +88,6 @@
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.05;
   margin-bottom: 1rem;
-}
-
-.hero__image-text p {
-  font-size: 1rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
 }
 
 /* CTA sobre imagen */
@@ -155,8 +157,9 @@
 
 .package-card:hover,
 .process-step:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
 .package-card::before,
@@ -366,13 +369,6 @@
   color: #ffffff;
 }
 
-/* Ajustes de texto */
-.cta h2 {
-  font-size: clamp(2.4rem, 5vw, 3.2rem);
-  margin-bottom: 1.4rem;
-  letter-spacing: 0.02em;
-}
-
 .cta__text {
   max-width: 600px;
   margin: 0 auto 1.8rem;
@@ -428,7 +424,21 @@
   box-shadow:
     0 10px 30px rgba(0,0,0,0.06),
     0 1px 0 rgba(255,255,255,0.8) inset;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+    opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.compare-card.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.compare-card--featured.is-visible {
+  transform: translateY(-6px);
 }
 
 .compare-card:hover {
@@ -486,6 +496,20 @@
 
 .compare-card li:last-child {
   border-bottom: none;
+}
+
+.compare-card li::after {
+  transform: scale(0.6);
+  opacity: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
+}
+
+/* Cuando la card entra */
+.compare-card.is-visible li::after {
+  transform: scale(1);
+  opacity: 1;
 }
 
 /* Palomita */
@@ -547,11 +571,6 @@
   letter-spacing: 0.01em;
 }
 
-.packages-compare h2 {
-  font-size: clamp(2rem, 4vw, 2.6rem);
-  margin-bottom: 0.6rem;
-}
-
 .packages-compare .section__intro {
   opacity: 0.75;
 }
@@ -590,11 +609,6 @@
   overflow: hidden;
 }
 
-.process h2 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
 .process .section__intro {
   text-align: center;
   max-width: 620px;
@@ -619,6 +633,26 @@
   text-align: center;
   box-shadow: var(--shadow-soft);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.process-step::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(160,120,255,0.08),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.process-step.is-visible::after {
+  opacity: 1;
 }
 
 .process-step:hover {
@@ -697,6 +731,30 @@
     0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
+/* Animación base */
+.process-step {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+/* Cuando entra en viewport */
+.process-step.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.process-step__number {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.process-step.is-visible .process-step__number {
+  transform: scale(1.05);
+}
+
 @keyframes paperDrift {
   from {
     background-position: 0 0;
@@ -711,9 +769,44 @@
    ===================================================== */
 
 .footer {
-  background-color: #ffffff;
-  padding: 5.5rem 0 2.5rem;
+  position: relative;
+  background-image: url("../img/cta.png"); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 5rem 0 2rem;
+  overflow: hidden;
 }
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+/* Overlay para legibilidad */
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 15, 40, 0.85),
+    rgba(20, 15, 40, 0.65)
+  );
+  z-index: 0;
+}
+
+/* Asegura que el contenido quede arriba */
+.footer .container {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Línea decorativa superior */
 .footer__divider {
@@ -789,6 +882,38 @@
   font-size: 0.75rem;
   color: var(--color-muted);
   border-top: 1px solid var(--color-border-soft);
+}
+
+/* =====================================================
+   FOOTER – TEXTO BLANCO SOBRE IMAGEN
+   ===================================================== */
+
+.footer,
+.footer h3,
+.footer p,
+.footer a {
+  color: #ffffff;
+}
+
+.footer__description,
+.footer__trust,
+.footer__cta-text,
+.footer__bottom {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__links a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer__divider,
+.footer__bottom {
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 /* =====================================================
