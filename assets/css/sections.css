@@ -51,7 +51,9 @@
   object-position: center 20%;
   transform: scale(1.08);
   opacity: 0;
-  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.2s ease;
+  transition:
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.2s ease;
 }
 
 .hero.is-visible .hero__bg img {
@@ -64,9 +66,11 @@
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.55));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.55)
+  );
 }
 
 /* =====================================================
@@ -96,9 +100,14 @@
   background-color: var(--color-action);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
-  font-size: 1.05rem;
-  padding: 1rem 2.4rem;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+
+  font-size: 0.95rem; /* ⬅️ más chico */
+  padding: 0.75rem 2rem; /* ⬅️ menos alto */
+  border-radius: 999px; /* ⬅️ más fino visualmente */
+  max-width: 220px; /* ⬅️ controla el ancho */
+  width: auto; /* ⬅️ evita que se estire */
+  margin: 0 auto; /* ⬅️ centrado perfecto */
 }
 
 .hero--image .btn--primary:hover {
@@ -113,7 +122,9 @@
 .hero__bg,
 .hero__overlay,
 .hero__image-text {
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .hero.is-fading .hero__bg,
@@ -129,6 +140,10 @@
 /* =====================================================
    SECCIONES GENERALES
    ===================================================== */
+.compare-card__cta {
+  margin-top: 2rem;
+  text-align: center;
+}
 
 .sections__grid {
   display: grid;
@@ -274,7 +289,8 @@
   /* 👇 MÁS AIRE INTERNO (ANTES: 1.1rem 0.6rem) */
   padding: 1.2rem 0.9rem;
 
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25),
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25),
     0 0 0 6px rgba(255, 255, 255, 0.12);
 }
 
@@ -339,9 +355,11 @@
 
 .events {
   padding: clamp(4.5rem, 8vw, 6.5rem) 0;
-  background: linear-gradient(180deg,
-      var(--color-bg-soft) 0%,
-      var(--color-bg) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-soft) 0%,
+    var(--color-bg) 100%
+  );
   position: relative;
   overflow: hidden;
 }
@@ -383,6 +401,27 @@
     box-shadow 0.35s ease;
 }
 
+.event-card__cta {
+  margin-top: 1.2rem;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-action);
+  background: transparent;
+  border: 1px solid rgba(120, 90, 255, 0.35);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border-color: var(--color-action);
+}
+
+
+.event-card__cta:hover {
+  background: var(--color-action);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
 .event-card.is-visible {
   opacity: 1;
   transform: none;
@@ -416,9 +455,11 @@
   font-size: 1.6rem;
   border-radius: 50%;
 
-  background: linear-gradient(135deg,
-      rgba(160, 120, 255, 0.18),
-      rgba(160, 120, 255, 0.06));
+  background: linear-gradient(
+    135deg,
+    rgba(160, 120, 255, 0.18),
+    rgba(160, 120, 255, 0.06)
+  );
 
   border: 1px solid rgba(160, 120, 255, 0.25);
 }
@@ -438,7 +479,6 @@
   max-width: 220px;
   margin: 0 auto;
 }
-
 
 /* CTA FINAL */
 .events__cta {
@@ -488,9 +528,11 @@
 .cta__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.6));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.6)
+  );
   z-index: 1;
 }
 
@@ -558,9 +600,7 @@
    ===================================================== */
 
 .compare-card--featured {
-  background: linear-gradient(180deg,
-      #1f3c4a 0%,
-      #162f3b 100%);
+  background: linear-gradient(180deg, #1f3c4a 0%, #162f3b 100%);
   color: #ffffff;
 
   transform: translateY(-18px) scale(1.04);
@@ -583,10 +623,12 @@
 }
 
 .compare-card--featured::before {
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 255, 255, 0.3),
-      transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
 }
 
 .compare-card--featured .badge {
@@ -614,11 +656,14 @@
   background: rgba(255, 255, 255, 0.98);
   border-radius: 20px;
   padding: 2.6rem 2.4rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06),
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06),
     0 1px 0 rgba(255, 255, 255, 0.8) inset;
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s ease;
 }
 
@@ -633,7 +678,8 @@
 
 .compare-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.08),
     0 1px 0 rgba(255, 255, 255, 0.85) inset;
 }
 
@@ -677,7 +723,9 @@
 .compare-card li::after {
   transform: scale(0.6);
   opacity: 0;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
 }
 
 /* Cuando la card entra */
@@ -757,16 +805,17 @@
   left: 20px;
   right: 20px;
   height: 1px;
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(0, 0, 0, 0.06),
-      transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.06),
+    transparent
+  );
 }
 
 .compare-card li svg {
   display: none;
 }
-
 
 /* =========================
    PROCESO DE COMPRA
@@ -774,9 +823,11 @@
 
 .process {
   padding: clamp(4rem, 8vw, 7rem) 0;
-  background: linear-gradient(180deg,
-      var(--color-bg) 0%,
-      var(--color-bg-soft) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    var(--color-bg-soft) 100%
+  );
   position: relative;
   overflow: hidden;
 }
@@ -806,7 +857,9 @@
   position: relative;
   text-align: center;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .process-step::after {
@@ -814,10 +867,12 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(120deg,
-      transparent,
-      rgba(160, 120, 255, 0.08),
-      transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(160, 120, 255, 0.08),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.6s ease;
   pointer-events: none;
@@ -849,10 +904,12 @@
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.05em;
-  color: var(--color-primary);
-  background: linear-gradient(135deg,
-      rgba(160, 120, 255, 0.15),
-      rgba(160, 120, 255, 0.05));
+  color: var(--color-action);
+  background: linear-gradient(
+    135deg,
+    rgba(160, 120, 255, 0.15),
+    rgba(160, 120, 255, 0.05)
+  );
   border: 1px solid rgba(160, 120, 255, 0.25);
 }
 
@@ -892,7 +949,8 @@
 .process-step {
   background-color: #ffffff;
   /* blanco real */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08),
     0 1px 0 rgba(255, 255, 255, 0.9) inset;
 }
 
@@ -909,7 +967,9 @@
 .process-step {
   opacity: 0;
   transform: translateY(24px) scale(0.98);
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.35s ease;
 }
 
@@ -957,9 +1017,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,
-      rgba(20, 15, 40, 0.85),
-      rgba(20, 15, 40, 0.65));
+  background: linear-gradient(
+    to top,
+    rgba(20, 15, 40, 0.85),
+    rgba(20, 15, 40, 0.65)
+  );
   z-index: 0;
 }
 
@@ -1079,7 +1141,9 @@
 .reveal-stagger {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal-stagger.is-visible {
@@ -1109,7 +1173,6 @@
 }
 
 @keyframes featuredFloat {
-
   0%,
   100% {
     transform: translateY(0);
@@ -1125,9 +1188,7 @@
    ===================================================== */
 
 .packages-compare .compare-card.compare-card--featured {
-  background: linear-gradient(180deg,
-      #1f3c4a 0%,
-      #162f3b 100%);
+  background: linear-gradient(180deg, #1f3c4a 0%, #162f3b 100%);
   color: #ffffff !important;
 
   transform: translateY(-18px) scale(1.04);

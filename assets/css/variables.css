@@ -1,31 +1,44 @@
 :root {
+  /* ================= TIPOGRAFÍAS ================= */
+  --font-hero: "Fredericka the Great", serif;
   --font-title: "Playfair Display", serif;
   --font-body: "Inter", system-ui, sans-serif;
-  --font-hero: "Fredericka the Great", serif;
-  /* Colores base */
-  --color-bg-main: #faf9f7;
-  --color-text-main: #2e2e2e;
-  --color-muted: #7a7a7a;
 
-  /* Color acción (botones / WhatsApp) */
-  --color-action: #1f3c4a; /* azul petróleo */
+  /* ================= COLORES BASE ================= */
+  --color-bg-main: #faf9f7;
+
+  /* Texto */
+  --color-text-main: #374151;      /* Gris cálido */
+  --color-text-muted: #6b7280;
+
+  /* ================= PALETA MARCA ================= */
+  --color-primary: #fbcfe8;        /* Rosa sakura */
+  --color-secondary: #ddd6fe;      /* Lavanda suave */
 
   /* Acentos */
+  --color-accent-1: #bae6fd;       /* Celeste cielo (íconos) */
+  --color-accent-2: #fed7aa;       /* Durazno cute (botones secundarios) */
+
+  /* Acción principal (CTA fuerte, WhatsApp, etc.) */
+  --color-action: #1f3c4a;         /* Azul petróleo */
+
+  /* ================= UI ================= */
   --color-border-soft: #e6e4e1;
-  --color-highlight: #ce9835;
+  --color-card-bg: #ffffff;
 
-  /* Tipografías */
-  --font-title: "Playfair Display", serif;
-  --font-body: "Montserrat", sans-serif;
-
-  /* Layout */
-  --container-width: 1200px;
+  /* ================= RADIOS ================= */
+  --radius-xl: 24px;
   --radius-lg: 16px;
-  --radius-md: 10px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
 
-  /* Sombras */
+  /* ================= SOMBRAS ================= */
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.12);
 
-  /* Transiciones */
+  /* ================= LAYOUT ================= */
+  --container-width: 1200px;
+
+  /* ================= TRANSICIONES ================= */
   --transition-base: all 0.3s ease;
 }

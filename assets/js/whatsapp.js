@@ -3,7 +3,7 @@
    ====================================== */
 
 /* CONFIGURACIÓN */
-const WHATSAPP_NUMBER = "2212576641"; 
+const WHATSAPP_NUMBER = "2212576641";
 // Ejemplo México: 5215512345678
 
 /* MENSAJES */
@@ -22,7 +22,28 @@ Me interesa el paquete Armonía con control de invitados y mesas.
 
   experiencia: `Hola ✨
 Me interesa el paquete Experiencia con QR y pase digital.
-¿Podrían brindarme más detalles?`
+¿Podrían brindarme más detalles?`,
+
+  /* EVENTOS */
+  boda: `Hola ✨
+Me gustaría información sobre invitaciones digitales para boda 💍.
+Quisiera conocer los paquetes disponibles y el proceso.`,
+
+  xv: `Hola ✨
+Me interesa una invitación digital para XV años ✨.
+¿Podrían brindarme opciones y precios?`,
+
+  bautizo: `Hola ✨
+Estoy buscando una invitación digital para bautizo 🕊️.
+¿Podrían darme más información, por favor?`,
+
+  cumple: `Hola ✨
+Me interesa una invitación digital para cumpleaños 🎂.
+¿Podrían brindarme detalles de los paquetes?`,
+
+  eventos: `Hola ✨
+Tengo un evento especial y me gustaría una invitación digital 🎉.
+¿Podrían orientarme con las opciones disponibles?`,
 };
 
 /* FUNCIÓN BASE */

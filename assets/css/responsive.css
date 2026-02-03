@@ -23,7 +23,6 @@
 }
 
 @media (max-width: 768px) {
-
   /* ================= HEADER ================= */
   .header__content {
     min-height: 64px;
@@ -204,18 +203,17 @@
 
   .events .section__intro {
     max-width: 100%;
-    padding: 0 1rem;
   }
 
-    .packages-compare__grid {
+  .packages-compare__grid {
     grid-template-columns: 1fr;
   }
 
   .compare-card--featured {
-    order: -1;
+    order: 2; /* mantiene el orden natural */
     transform: none;
   }
-  
+
   /* ================= CTA ================= */
   .cta {
     padding: 6rem 0;
@@ -270,7 +268,7 @@
     padding: 1.1rem 0.55rem;
   }
 
-    /* ===== EVENTOS ===== */
+  /* ===== EVENTOS ===== */
   .events__grid {
     grid-template-columns: 1fr;
   }
