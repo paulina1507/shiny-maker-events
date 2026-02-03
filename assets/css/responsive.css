@@ -15,9 +15,15 @@
   .process__grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* ===== EVENTOS ===== */
+  .events__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
+
   /* ================= HEADER ================= */
   .header__content {
     min-height: 64px;
@@ -115,6 +121,7 @@
   .package-card {
     max-width: 100%;
   }
+
   /* Ocultar encabezado */
   .comparison-table thead {
     display: none;
@@ -185,6 +192,30 @@
     opacity: 0.35;
   }
 
+  /* ===== EVENTOS ===== */
+  .events__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .event-card {
+    padding: 2.1rem 1.6rem 2.3rem;
+  }
+
+  .events .section__intro {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+    .packages-compare__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-card--featured {
+    order: -1;
+    transform: none;
+  }
+  
   /* ================= CTA ================= */
   .cta {
     padding: 6rem 0;
@@ -237,5 +268,14 @@
   .interactive__video-wrapper {
     max-width: 260px;
     padding: 1.1rem 0.55rem;
+  }
+
+    /* ===== EVENTOS ===== */
+  .events__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    padding: 2rem 1.5rem 2.2rem;
   }
 }
