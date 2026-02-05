@@ -23,7 +23,6 @@
 }
 
 @media (max-width: 768px) {
-
   /* ================= HEADER ================= */
   .header__content {
     min-height: 64px;
@@ -56,7 +55,7 @@
     display: flex;
   }
 
-    .footer__content {
+  .footer__content {
     grid-template-columns: 1fr;
     text-align: center;
   }
@@ -190,6 +189,21 @@
     width: 100%;
     max-width: 280px;
     margin: 0.8rem auto 0;
+  }
+
+  .floating-socials--top {
+    top: calc(70px + env(safe-area-inset-top));
+    right: 14px;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-btn img {
+    width: 24px;
+    height: 24px;
   }
 }
 

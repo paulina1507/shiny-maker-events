@@ -264,14 +264,6 @@
 .social-btn.instagram { background: #E1306C; }
 .social-btn.facebook  { background: #1877F2; }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .floating-socials--top {
-    display: none;
-  }
-}
-
-
 /* =====================================================
    FOOTER – EDITORIAL 3 COLUMNAS
    ===================================================== */
