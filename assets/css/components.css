@@ -244,8 +244,8 @@
 
 /* BOTÓN */
 .social-btn {
-  width: 44px;
-  height: 44px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -264,8 +264,8 @@
 
 /* SVG */
 .social-btn img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: block;
 }
 

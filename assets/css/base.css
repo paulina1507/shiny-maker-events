@@ -67,15 +67,23 @@ body {
   min-height: 72px;
 }
 
-/* LOGO */
 .logo {
-  font-family: var(--font-title);
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--color-text-main);
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
+
+.logo__link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Logo SVG */
+.logo__img {
+  height: 54px;     /* TU logo lo aguanta perfecto */
+  width: auto;
+  display: block;
+}
+
 
 /* =========================
    NAV
