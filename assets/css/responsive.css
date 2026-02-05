@@ -194,6 +194,7 @@
   .floating-socials--top {
     top: calc(70px + env(safe-area-inset-top));
     right: 14px;
+    gap: 12px;
   }
 
   .social-btn {

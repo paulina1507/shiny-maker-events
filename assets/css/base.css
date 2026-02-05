@@ -149,7 +149,19 @@ body {
 
 section {
   padding: 5rem 0;
-  overflow-x: hidden; /* 👈 secciones no empujan viewport */
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* solo donde realmente lo necesitas */
+.hero,
+.hero--image,
+.interactive,
+.events,
+.process {
+  overflow-x: hidden;
 }
 
 /* =========================

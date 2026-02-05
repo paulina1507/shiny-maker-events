@@ -220,18 +220,26 @@
   outline-offset: 3px;
 }
 
+.floating-socials--top,
+.floating-socials--top * {
+  transform: none !important;
+}
+
 /* =========================
    BOTONES FLOTANTES – TOP
    ========================= */
 /* CONTENEDOR */
 .floating-socials--top {
   position: fixed;
-  top: 90px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 3000; /* más que header */
+  top: calc(90px + env(safe-area-inset-top));
+  right: calc(20px + env(safe-area-inset-right));
+  z-index: 9999;
+  pointer-events: auto;
+  isolation: isolate;
+
+  display: flex;              /* 👈 FALTABA */
+  flex-direction: column;     /* 👈 vertical */
+  gap: 14px;                  /* 👈 espacio entre botones */
 }
 
 /* BOTÓN */
@@ -243,13 +251,15 @@
   align-items: center;
   justify-content: center;
   background: #000; /* fallback */
-  box-shadow: 0 12px 30px rgba(0,0,0,.25);
-  transition: transform .3s ease, box-shadow .3s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .social-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
 /* SVG */
@@ -260,9 +270,15 @@
 }
 
 /* Colores */
-.social-btn.whatsapp  { background: #25D366; }
-.social-btn.instagram { background: #E1306C; }
-.social-btn.facebook  { background: #1877F2; }
+.social-btn.whatsapp {
+  background: #25d366;
+}
+.social-btn.instagram {
+  background: #e1306c;
+}
+.social-btn.facebook {
+  background: #1877f2;
+}
 
 /* =====================================================
    FOOTER – EDITORIAL 3 COLUMNAS
