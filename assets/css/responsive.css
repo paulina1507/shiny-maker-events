@@ -23,6 +23,7 @@
 }
 
 @media (max-width: 768px) {
+
   /* ================= HEADER ================= */
   .header__content {
     min-height: 64px;
@@ -92,6 +93,19 @@
   }
 
   /* ================= SECTIONS ================= */
+  .interactive__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .interactive__video-wrapper {
+    max-width: 260px;
+  }
+
+  .interactive__list li {
+    font-size: 0.95rem;
+  }
+
   .sections__grid,
   .packages__grid {
     grid-template-columns: 1fr;
@@ -121,76 +135,6 @@
     max-width: 100%;
   }
 
-  /* Ocultar encabezado */
-  .comparison-table thead {
-    display: none;
-  }
-
-  /* Reset tabla */
-  .comparison-table,
-  .comparison-table tbody,
-  .comparison-table tr,
-  .comparison-table td {
-    display: block;
-    width: 100%;
-  }
-
-  /* Cada paquete = un segmento */
-  .comparison-table tr {
-    background: #ffffff;
-    border-radius: 18px;
-    margin-bottom: 1.5rem;
-    padding: 1.2rem 1.2rem 1.4rem;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-  }
-
-  /* Nombre de la función */
-  .comparison-table td:first-child {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.8rem;
-    color: var(--color-text);
-  }
-
-  /* Valores de cada paquete */
-  .comparison-table td:not(:first-child) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.55rem 0;
-    border-top: 1px dashed var(--color-border-soft);
-    font-size: 0.9rem;
-  }
-
-  /* Etiquetas de paquete */
-  .comparison-table td:nth-child(2)::before {
-    content: "Esencia";
-  }
-
-  .comparison-table td:nth-child(3)::before {
-    content: "Armonía";
-  }
-
-  .comparison-table td:nth-child(4)::before {
-    content: "Experiencia";
-    font-weight: 600;
-    color: var(--color-action);
-  }
-
-  .comparison-table td::before {
-    font-size: 0.75rem;
-    color: var(--color-muted);
-  }
-
-  /* Íconos */
-  .comparison-table .yes {
-    font-size: 1rem;
-  }
-
-  .comparison-table .no {
-    opacity: 0.35;
-  }
-
   /* ===== EVENTOS ===== */
   .events__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -210,7 +154,8 @@
   }
 
   .compare-card--featured {
-    order: 2; /* mantiene el orden natural */
+    order: 2;
+    /* mantiene el orden natural */
     transform: none;
   }
 
