@@ -262,10 +262,12 @@
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* SVG */
 .social-btn img {
   width: 45px;
-  height: 45px;
+  height: auto;
+  max-width: 45px;
+  max-height: 45px;
+  object-fit: contain;
   display: block;
 }
 
@@ -394,7 +396,9 @@
 
 .footer__social-icons img {
   width: 18px;
-  height: 18px;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 /* WhatsApp */
@@ -413,10 +417,17 @@
   justify-content: center;
 }
 
+.footer__social-icons a img {
+  pointer-events: none;
+}
+
 .footer__whats img {
   width: 24px;
-  height: 24px;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
+
 
 /* ---------- CTA ---------- */
 
