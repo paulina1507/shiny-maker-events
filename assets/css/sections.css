@@ -852,7 +852,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-family: var(--font-main);
+  font-family: var(--font-body);
   color: var(--color-text);
 }
 
