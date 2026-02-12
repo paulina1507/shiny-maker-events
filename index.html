@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invitaciones Digitales Elegantes | Shiny Maker Events</title>
+    <title>
+      Invitaciones Digitales para Bodas y XV Años | Shiny Maker Studio
+    </title>
 
     <!-- SEO / Ads -->
     <meta
       name="description"
-      content="Invitaciones digitales elegantes e interactivas con canción, galería, cuenta regresiva y confirmación de asistencia. Cotiza fácilmente por WhatsApp."
+      content="Invitaciones digitales interactivas para bodas, XV años y eventos. Con música, galería, RSVP y mapa. Recibe tu link listo para compartir por WhatsApp. Cotiza hoy."
     />
     <meta
       name="keywords"
@@ -50,31 +52,36 @@
 
   <body>
     <!-- HEADER -->
-    <header class="header reveal">
-      <div class="container header__content">
-        <div class="logo">
+    <header class="header-modern">
+      <div class="container header-modern__content">
+        <div class="logo-modern">
           <a href="#inicio" class="logo__link">
             <img
-              src="assets/svg/logo-morado.svg"
-              alt="Shiny Maker Events"
-              class="logo__img"
+              src="assets/svg/destello.svg"
+              alt="Shiny Maker Studio"
+              class="logo__icon"
             />
+
+            <span class="logo__text">
+              Shiny Maker <strong>Studio</strong>
+            </span>
           </a>
         </div>
 
-        <button class="nav-toggle" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
-        </button>
-
-        <nav class="nav">
+        <nav class="nav-modern">
           <a href="#inicio">Inicio</a>
           <a href="#interactiva">Qué incluye</a>
-          <a href="#eventos">Mi evento</a>
-          <a href="#proceso">Proceso</a>
-          <a class="btn btn--primary nav-cta" onclick="openWhatsApp()">
-            Escríbenos
+          <a href="#eventos">Eventos</a>
+          <a href="#paquetes">Precios</a>
+          <a href="#proceso">Cómo funciona</a>
+          <a href="#faq">Preguntas</a>
+
+          <a class="btn btn--primary" onclick="openWhatsApp('general')">
+            Cotizar
           </a>
         </nav>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
       </div>
     </header>
 
@@ -109,276 +116,430 @@
     </div>
 
     <!-- HERO EDITORIAL -->
-    <section id="inicio" class="hero hero--image">
-      <div class="hero__bg">
-        <img
-          src="assets/img/hero.png"
-          alt="Invitaciones digitales elegantes"
-          loading="eager"
-        />
-      </div>
-      <div class="hero__overlay"></div>
+    <section id="inicio" class="hero-modern">
+      <div class="hero-modern__gradient"></div>
 
-      <div class="container hero__image-content">
-        <div class="hero__image-text reveal-scale">
-          <h1>
-            Una invitación que se comparte,<br />
-            se vive y se recuerda
+      <div class="container hero-modern__grid">
+        <!-- TEXTO -->
+        <div class="hero-modern__content">
+          <span class="hero-badge"> Invitaciones Digitales</span>
+
+          <h1 class="hero-title-special">
+            Una invitación que se comparte, se vive y se recuerda
           </h1>
+
           <p>
-            Diseños digitales elegantes para bodas, XV años y eventos especiales
+            Invitaciones interactivas listas para compartir por WhatsApp con
+            confirmación de asistencia, mapas y música.
           </p>
-          <a
-            href="javascript:void(0)"
-            class="btn btn--primary btn--hero"
-            onclick="openWhatsApp()"
-          >
-            Quiero mi invitación
-          </a>
+
+          <div class="hero-modern__buttons">
+            <a href="#paquetes" class="btn btn--primary"> Ver Paquetes </a>
+
+            <a href="#demos" class="btn btn--outline"> Ver Demos </a>
+          </div>
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="hero-modern__image">
+          <div class="hero-floating-card fade-up fade-delay-2">
+            <div class="hero-floating-avatars">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="hero-counter">
+              <span class="counter" data-target="500">0</span>+ Invitaciones
+              creadas
+            </div>
+
+            <p class="hero-counter__quote">
+              "La mejor forma de invitar a mi boda."
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- INVITACIÓN INTERACTIVA -->
-    <section id="interactiva" class="interactive">
-      <div class="container interactive__grid">
-        <!-- TELEFONO PRIMERO -->
-        <div class="interactive__media reveal-left">
-          <div class="interactive__video-wrapper">
+    <!-- BLOQUE B · MOCKUP + FUNCIONES -->
+    <section id="interactiva" class="interactive-modern">
+      <div class="section-header-center">
+        <h2>Contenido de tu invitación</h2>
+      </div>
+      <div class="interactive-modern__grid">
+        <!-- MOCKUP -->
+        <div class="interactive-modern__media">
+          <div class="phone-mockup">
             <video
-              class="interactive__video"
-              src="assets/video/invitacion-demo.mp4"
               autoplay
               muted
               loop
               playsinline
               preload="metadata"
-              poster="assets/img/video-poster.jpg"
-            ></video>
-
-            <span class="interactive__video-label">
-              Así se verá tu invitación
-            </span>
+              poster="assets/img/preview.jpg"
+            >
+              <source src="assets/video/boda1.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
 
-        <!-- TEXTO DESPUÉS -->
-        <div class="interactive__features reveal-right">
-          <h2>Invitaciones que se viven</h2>
+        <!-- FUNCIONES AGRUPADAS -->
+        <div class="interactive-modern__features">
+          <!-- EXPERIENCIA -->
+          <div class="feature-group">
+            <h4 class="feature-title">
+              <img src="assets/svg/music.svg" alt="" class="feature-icon" />
+              Experiencia
+            </h4>
+            <ul>
+              <li>Música personalizada</li>
+              <li>Cuenta regresiva</li>
+              <li>Galería de fotos</li>
+            </ul>
+          </div>
 
-          <p class="section__intro">
-            Tus invitados abren la invitación desde su celular y viven la
-            experiencia del evento antes de que suceda.
-          </p>
+          <!-- INFORMACIÓN -->
+          <div class="feature-group">
+            <h4 class="feature-title">
+              <img src="assets/svg/location.svg" alt="" class="feature-icon" />
+              Información clara
+            </h4>
+            <ul>
+              <li>Ubicación con mapa interactivo</li>
+              <li>Itinerario del evento</li>
+              <li>Código de vestimenta</li>
+            </ul>
+          </div>
 
-          <ul class="interactive__list">
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/music.svg" alt="" />
-              </span>
-              Canción personalizada
-            </li>
+          <!-- ORGANIZACIÓN -->
+          <div class="feature-group">
+            <h4 class="feature-title">
+              <img src="assets/svg/guests.svg" alt="" class="feature-icon" />
+              Organización inteligente
+            </h4>
+            <ul>
+              <li>Confirmación de asistencia (RSVP)</li>
+              <li>Panel de invitados</li>
+              <li>Control de mesas y pases</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/countdown.gif" alt="" />
-              </span>
-              Cuenta regresiva al gran día
-            </li>
+      <div class="interactive-modern__divider"></div>
 
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/gallery.svg" alt="" />
-              </span>
-              Galería con sus mejores recuerdos
-            </li>
+      <!-- BLOQUE C · DIFERENCIADOR -->
+      <div class="interactive-modern__compare">
+        <h2>La forma moderna de invitar es digital</h2>
+        <p class="compare-subtitle">
+          Más control, más claridad y cero complicaciones.
+        </p>
 
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/location.svg" alt="" />
-              </span>
-              Ubicación exacta del evento con mapa interactivo
-            </li>
+        <div class="diff-grid">
+          <div class="diff-card diff-card--muted">
+            <h5>Invitación tradicional</h5>
+            <ul>
+              <li class="no">Papel que se pierde</li>
+              <li class="no">No sabes quién asistirá</li>
+              <li class="no">Dirección escrita sin mapa</li>
+              <li class="no">Sin control de invitados</li>
+            </ul>
+          </div>
 
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/confirm.svg" alt="" />
-              </span>
-              Confirmación de asistencia en segundos
-            </li>
+          <div class="diff-card diff-card--highlight">
+            <h5>Invitación digital</h5>
+            <ul>
+              <li class="yes">Siempre accesible desde el celular</li>
+              <li class="yes">Confirmación automática</li>
+              <li class="yes">Mapa interactivo</li>
+              <li class="yes">Panel y control en tiempo real</li>
+            </ul>
+          </div>
+        </div>
 
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/guests.svg" alt="" />
-              </span>
-              Lista y control de invitados
-            </li>
-
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/tickets.svg" alt="" />
-              </span>
-              Número de pases por persona
-            </li>
-
-            <li class="interactive__list">
-              <span class="feature-icon">
-                <img src="assets/svg/tables.svg" alt="" />
-              </span>
-              Organización y número de mesas
-            </li>
-          </ul>
-
-          <p class="interactive__note">
-            Funciona en cualquier celular · Fácil de compartir · Sin apps
-          </p>
+        <div class="interactive-modern__cta">
+          <a href="#paquetes" class="btn btn--primary">Ver Paquetes</a>
         </div>
       </div>
     </section>
 
     <!-- TIPOS DE EVENTOS -->
-    <section id="eventos" class="events">
+    <section id="eventos" class="events-modern">
       <div class="container">
-        <h2 class="reveal">Invitaciones para cada momento especial</h2>
+        <div class="section-header-center">
+          <h2>Celebraciones a medida</h2>
+          <p>
+            Diseñamos invitaciones digitales adaptadas al estilo y personalidad
+            de cada evento.
+          </p>
+        </div>
 
-        <p class="section__intro reveal">
-          Diseños digitales pensados para acompañar la emoción de cada
-          celebración.
-        </p>
-
-        <div class="events__grid">
-          <article class="event-card reveal reveal--d1">
-            <span class="event-card__icon">💍</span>
+        <div class="events-modern__grid">
+          <article class="event-card-modern">
+            <div class="event-icon-modern">
+              <img src="assets/svg/boda.svg" alt="Bodas" />
+            </div>
             <h3>Bodas</h3>
-            <p>
-              Invitaciones elegantes para anunciar uno de los días más
-              importantes de su historia.
-            </p>
+            <p>Elegancia digital para el día más importante.</p>
             <button class="event-card__cta" onclick="openWhatsApp('boda')">
-              Más información
+              Cotizar este evento
             </button>
           </article>
 
-          <article class="event-card reveal reveal--d2">
-            <span class="event-card__icon">✨</span>
-            <h3>XV años</h3>
-            <p>
-              Diseños únicos que reflejan personalidad, ilusión y un nuevo
-              comienzo.
-            </p>
+          <article class="event-card-modern">
+            <div class="event-icon-modern">
+              <img src="assets/svg/xv.svg" alt="XV Años" />
+            </div>
+            <h3>XV Años</h3>
+            <p>Diseños vibrantes y modernos para tu gran fiesta.</p>
             <button class="event-card__cta" onclick="openWhatsApp('xv')">
-              Más información
+              Cotizar este evento
             </button>
           </article>
 
-          <article class="event-card reveal reveal--d3">
-            <span class="event-card__icon">🕊️</span>
+          <article class="event-card-modern">
+            <div class="event-icon-modern">
+              <img src="assets/svg/bautizo.svg" alt="Bautizo" />
+            </div>
             <h3>Bautizos</h3>
-            <p>Invitaciones delicadas y cálidas para celebrar en familia.</p>
+            <p>Estilo delicado para celebrar en familia.</p>
             <button class="event-card__cta" onclick="openWhatsApp('bautizo')">
-              Más información
+              Cotizar este evento
             </button>
           </article>
 
-          <article class="event-card reveal reveal--d4">
-            <span class="event-card__icon">🎂</span>
+          <article class="event-card-modern">
+            <div class="event-icon-modern">
+              <img src="assets/svg/Cumple.svg" alt="Cumple" />
+            </div>
             <h3>Cumpleaños</h3>
-            <p>
-              Desde infantiles hasta adultos, cada celebración merece un diseño
-              especial.
-            </p>
+            <p>Desde infantiles hasta temáticos.</p>
             <button class="event-card__cta" onclick="openWhatsApp('cumple')">
-              Más información
+              Cotizar este evento
             </button>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="event-card reveal reveal--d5">
-            <span class="event-card__icon">🎉</span>
-            <h3>Y más eventos</h3>
-            <p>
-              Aniversarios, despedidas, baby shower o cualquier ocasión que
-              quieras compartir de forma única.
-            </p>
-            <button class="event-card__cta" onclick="openWhatsApp('eventos')">
-              Más información
-            </button>
-          </article>
+    <section id="paquetes" class="packages-modern">
+      <div class="container">
+        <div class="section-header-center">
+          <h2>Elige tu Paquete</h2>
+          <p>Opciones pensadas para distintos tipos de evento y necesidades.</p>
+        </div>
+
+        <!-- BODAS & XV -->
+        <div class="packages-category">
+          <h3 class="packages-category__title">Bodas & XV Años</h3>
+
+          <div class="packages-grid">
+            <!-- ESENCIA -->
+            <div class="package-card">
+              <h4>Paquete Esencia</h4>
+              <div class="package-price">$600 <span>MXN</span></div>
+
+              <ul>
+                <li>Canción personalizada</li>
+                <li>Cuenta regresiva</li>
+                <li>Galería de fotos</li>
+                <li>Ubicación del evento</li>
+                <li>Itinerario</li>
+                <li>Código de vestimenta</li>
+              </ul>
+
+              <button
+                class="btn btn--outline"
+                onclick="openWhatsApp('esencia')"
+              >
+                Seleccionar
+              </button>
+            </div>
+
+            <!-- ARMONÍA -->
+            <div class="package-card package-card--featured">
+              <div class="package-badge">Recomendado</div>
+
+              <h4>Paquete Armonía</h4>
+              <div class="package-price">$1,200 <span>MXN</span></div>
+
+              <ul>
+                <li>Todo lo del paquete Esencia</li>
+                <li>Confirmación RSVP</li>
+                <li>Panel de invitados</li>
+                <li>Pases por invitado</li>
+                <li>Control de mesas</li>
+              </ul>
+
+              <button
+                class="btn btn--primary"
+                onclick="openWhatsApp('armonia')"
+              >
+                Contratar Ahora
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CUMPLEAÑOS -->
+        <div class="packages-category">
+          <h3 class="packages-category__title">Cumpleaños</h3>
+
+          <div class="packages-grid">
+            <div class="package-card">
+              <h4>Paquete Fiesta</h4>
+              <div class="package-price">$350 <span>MXN</span></div>
+
+              <ul>
+                <li>Diseño temático</li>
+                <li>Música</li>
+                <li>Cuenta regresiva</li>
+                <li>Galería de fotos</li>
+                <li>Ubicación</li>
+              </ul>
+
+              <button class="btn btn--outline">Seleccionar</button>
+            </div>
+
+            <div class="package-card">
+              <h4>Paquete Fiesta Plus</h4>
+              <div class="package-price">$600 <span>MXN</span></div>
+
+              <ul>
+                <li>Todo lo del Fiesta</li>
+                <li>Confirmación RSVP</li>
+                <li>Lista simple de invitados</li>
+              </ul>
+
+              <button class="btn btn--outline">Seleccionar</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- PROCESO -->
-    <section id="proceso" class="process">
+    <section id="proceso" class="process-modern">
       <div class="container">
-        <h2 class="reveal">¿Cómo creamos tu invitación?</h2>
+        <div class="section-header-center">
+          <h2>¿Cómo trabajamos?</h2>
+          <p>
+            Un proceso simple y claro para que solo te preocupes por disfrutar
+            tu evento.
+          </p>
+        </div>
 
-        <p class="section__intro reveal">
-          Te acompañamos paso a paso para que tu invitación quede justo como la
-          imaginaste.
-        </p>
+        <div class="process-modern__wrapper">
+          <div class="process-modern__line"></div>
 
-        <div class="process__grid">
-          <!-- Paso 1 -->
-          <article class="process-step reveal-stagger reveal--d1">
-            <span class="process-step__number">01</span>
-            <h3>Contáctanos</h3>
+          <article class="process-step-modern">
+            <div class="process-step-modern__number">1</div>
+            <h4>Elige Diseño</h4>
             <p>
-              Escríbenos por WhatsApp y cuéntanos qué tipo de evento tienes y la
-              fecha.
+              Selecciona uno de nuestro catálogo o solicita uno personalizado.
             </p>
           </article>
 
-          <!-- Paso 2 -->
-          <article class="process-step reveal-stagger reveal--d2">
-            <span class="process-step__number">02</span>
-            <h3>Definimos tu invitación</h3>
-            <p>
-              Te orientamos y adaptamos la invitación según tu evento, estilo y
-              necesidades.
-            </p>
+          <article class="process-step-modern">
+            <div class="process-step-modern__number">2</div>
+            <h4>Envía Información</h4>
+            <p>Nombres, fecha, ubicación, fotos y detalles del evento.</p>
           </article>
 
-          <!-- Paso 3 -->
-          <article class="process-step reveal-stagger reveal--d3">
-            <span class="process-step__number">03</span>
-            <h3>Envíanos tu información</h3>
-            <p>
-              Recibimos tus datos, fotos, canción y detalles del evento para
-              diseñar tu invitación.
-            </p>
+          <article class="process-step-modern">
+            <div class="process-step-modern__number">3</div>
+            <h4>Confirmación de Pago</h4>
+            <p>Pago completo o anticipo según el tipo de evento.</p>
           </article>
 
-          <!-- Paso 4 -->
-          <article class="process-step reveal-stagger reveal--d4">
-            <span class="process-step__number">04</span>
-            <h3>Diseño y ajustes</h3>
-            <p>
-              Creamos tu invitación y realizamos los ajustes necesarios hasta
-              que quede perfecta.
-            </p>
+          <article class="process-step-modern">
+            <div class="process-step-modern__number">4</div>
+            <h4>Diseño</h4>
+            <p>Personalizamos cada detalle de tu invitación.</p>
           </article>
 
-          <!-- Paso 5 -->
-          <article class="process-step reveal-stagger reveal--d5">
-            <span class="process-step__number">05</span>
-            <h3>Entrega y comparte</h3>
-            <p>
-              Te entregamos el enlace final para que lo compartas con todos tus
-              invitados.
-            </p>
+          <article class="process-step-modern">
+            <div class="process-step-modern__number">5</div>
+            <h4>Entrega Final</h4>
+            <p>Recibe tu link listo para compartir por WhatsApp.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <footer class="footer reveal">
+    <section id="faq" class="faq-modern">
+      <div class="container">
+        <div class="section-header-center">
+          <h2>Preguntas frecuentes</h2>
+          <p>Resolvemos las dudas más comunes antes de contratar.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cuánto tiempo tarda la entrega?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                El tiempo promedio es de 3 a 5 días dependiendo del tipo de
+                evento y la cantidad de información enviada.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cómo se realiza el pago?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Puedes pagar por transferencia bancaria. En algunos casos se
+                solicita anticipo y el resto al finalizar el diseño.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Funciona en cualquier celular?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Sí. Se abre desde cualquier navegador moderno sin necesidad de
+                descargar aplicaciones.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cómo funciona la confirmación de asistencia?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Tus invitados confirman desde el link y tú puedes ver las
+                respuestas en tiempo real si tu paquete lo incluye.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
       <div class="container">
         <div class="footer__divider"></div>
 
         <div class="footer__content">
           <!-- MARCA -->
           <div class="footer__brand">
-            <h3>© Shiny Maker Events</h3>
+            <h3>© Shiny Maker Studio</h3>
             <p class="footer__description">
               Invitaciones digitales para bodas, XV años y momentos que merecen
               recordarse.
@@ -391,11 +552,7 @@
           <!-- CTA -->
           <div class="footer__cta">
             <p class="footer__cta-text">¿Creamos algo especial juntos?</p>
-            <a
-              href="javascript:void(0)"
-              class="btn btn--primary"
-              onclick="openWhatsApp()"
-            >
+            <a class="btn btn--primary" onclick="openWhatsApp('general')">
               Cotizar mi invitación
             </a>
           </div>

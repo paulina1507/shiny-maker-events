@@ -1,5 +1,5 @@
 /* ======================================
-   WhatsApp – Shiny Maker Events
+   WhatsApp – Shiny Maker 
    ====================================== */
 
 /* CONFIGURACIÓN */
@@ -9,7 +9,7 @@ const WHATSAPP_NUMBER = "522212706617";
 /* MENSAJES */
 const messages = {
   general: `Hola ✨
-Me gustaría solicitar información sobre las invitaciones digitales de Shiny Maker Events.
+Me gustaría solicitar información sobre las invitaciones digitales de Shiny Maker Studio.
 ¿Podrían brindarme detalles sobre los paquetes disponibles?`,
 
   esencia: `Hola ✨

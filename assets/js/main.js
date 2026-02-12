@@ -2,17 +2,17 @@
    MENÚ MOBILE
    ========================= */
 
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const navModern = document.querySelector(".nav-modern");
 
-if (navToggle && nav) {
-  navToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
+if (menuToggle && navModern) {
+  menuToggle.addEventListener("click", () => {
+    navModern.classList.toggle("active");
   });
 
-  document.querySelectorAll(".nav a").forEach((link) => {
+  document.querySelectorAll(".nav-modern a").forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("active");
+      navModern.classList.remove("active");
     });
   });
 }
@@ -61,7 +61,7 @@ window.addEventListener("scroll", () => {
 // HEADER SCROLL EFFECT
 // ============================================
 
-const header = document.querySelector(".header");
+const header = document.querySelector(".header-modern");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 24) {
@@ -142,5 +142,64 @@ document.querySelectorAll('.event-card__cta').forEach(btn => {
     setTimeout(() => {
       card.classList.remove('is-activated');
     }, 600);
+  });
+});
+
+document.querySelectorAll('.package-card .btn--outline').forEach(btn => {
+  btn.addEventListener('click', function() {
+
+    // Quitar selección previa
+    document.querySelectorAll('.package-card .btn--outline')
+      .forEach(b => b.classList.remove('btn--selected'));
+
+    // Activar el actual
+    this.classList.add('btn--selected');
+
+  });
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".fade-up").forEach(el => {
+  observer.observe(el);
+});
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.dataset.target;
+    const current = +counter.innerText;
+    const increment = target / 60;
+
+    if (current < target) {
+      counter.innerText = Math.ceil(current + increment);
+      requestAnimationFrame(update);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  update();
+});
+
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.parentElement;
+
+    item.classList.toggle("active");
+
+    // Cierra los demás si quieres modo exclusivo
+    document.querySelectorAll(".faq-item").forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove("active");
+      }
+    });
   });
 });

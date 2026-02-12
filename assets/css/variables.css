@@ -1,44 +1,27 @@
 :root {
-  /* ================= TIPOGRAFÍAS ================= */
-  --font-hero: "Fredericka the Great", serif;
+  /* ===== Tipografía ===== */
   --font-title: "Playfair Display", serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-main: "Fredericka the Great", cursive;
 
-  /* ================= COLORES BASE ================= */
-  --color-bg-main: #faf9f7;
+  /* ===== Colores ===== */
+  --color-primary: #ee2b6c;
+  --color-bg: #f8f6f6;
+  --color-section: #f3e9ed;
+  --color-surface: #ffffff;
+  --color-dark: #221016;
 
-  /* Texto */
-  --color-text-main: #374151;      /* Gris cálido */
+  --color-text: #1f2937;
   --color-text-muted: #6b7280;
 
-  /* ================= PALETA MARCA ================= */
-  --color-primary: #fbcfe8;        /* Rosa sakura */
-  --color-secondary: #ddd6fe;      /* Lavanda suave */
+  /* ===== Bordes ===== */
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
 
-  /* Acentos */
-  --color-accent-1: #bae6fd;       /* Celeste cielo (íconos) */
-  --color-accent-2: #fed7aa;       /* Durazno cute (botones secundarios) */
+  /* ===== Sombras ===== */
+  --shadow-soft: 0 10px 30px rgba(238, 43, 108, 0.08);
+  --shadow-strong: 0 25px 60px rgba(0, 0, 0, 0.15);
 
-  /* Acción principal (CTA fuerte, WhatsApp, etc.) */
-  --color-action: #1f3c4a;         /* Azul petróleo */
-
-  /* ================= UI ================= */
-  --color-border-soft: #e6e4e1;
-  --color-card-bg: #ffffff;
-
-  /* ================= RADIOS ================= */
-  --radius-xl: 24px;
-  --radius-lg: 16px;
-  --radius-md: 12px;
-  --radius-sm: 8px;
-
-  /* ================= SOMBRAS ================= */
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.12);
-
-  /* ================= LAYOUT ================= */
   --container-width: 1200px;
-
-  /* ================= TRANSICIONES ================= */
-  --transition-base: all 0.3s ease;
 }
