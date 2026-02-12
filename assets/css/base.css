@@ -94,7 +94,7 @@ section::after {
    ========================= */
 
 .hero-modern {
-  padding: 10rem 0 7rem;
+  padding: 7rem 0 7rem;
   position: relative;
   overflow: hidden;
   background: var(--color-bg);
