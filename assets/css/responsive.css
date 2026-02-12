@@ -1,4 +1,5 @@
 @media (max-width: 768px) {
+
   /* BOTONES RESPONSIVE */
   .btn {
     width: 100%;
@@ -7,19 +8,45 @@
     padding: 0.9rem 1.4rem;
     font-size: 0.95rem;
   }
+
+  .hero-modern {
+    background: #f9f8fc;
+  }
+
   /* Cuando estén juntos */
   .hero-modern__buttons {
     flex-direction: column;
-    align-items: stretch; /* 👈 importante */
+    align-items: stretch;
+    /* 👈 importante */
   }
 
   .hero-modern__buttons .btn {
     width: 100%;
     max-width: 100%;
   }
+
   .hero-modern__buttons .btn {
     box-sizing: border-box;
   }
+
+  .interactive-modern {
+    padding: 7rem 2rem;
+  }
+
+  .diff-grid {
+    padding: 0 0.5rem;
+  }
+
+  /* Más espacio alrededor de las cards */
+  .interactive-modern {
+    padding: 6rem 1.5rem;
+  }
+
+  /* Separación entre card y contenedor */
+  .diff-card {
+    margin: 0 0.5rem;
+  }
+
   /* ================= HEADER ================= */
   .nav-modern {
     position: absolute;
@@ -57,6 +84,7 @@
     position: static;
     margin-top: 2rem;
   }
+
   .header__content {
     min-height: 64px;
     padding: 0.8rem 1.2rem;
@@ -93,6 +121,7 @@
   }
 
   /* ================= SECTIONS ================= */
+
   .interactive-modern__features {
     margin: 0 auto;
   }
