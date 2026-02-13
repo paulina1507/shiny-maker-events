@@ -1,6 +1,56 @@
 @media (max-width: 768px) {
 
-  /* BOTONES RESPONSIVE */
+  /* ================= HERO ================= */
+
+  .hero-modern {
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-modern__grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    text-align: center;
+  }
+
+  .hero-modern__content {
+    order: 1;
+  }
+
+  .hero-modern__content p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 420px;
+  }
+
+  .hero-modern__image {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .hero-modern__image img {
+    max-width: 240px;
+    width: 100%;
+  }
+
+  /* BOTONES HERO */
+
+  .hero-modern__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .hero-modern__buttons .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ================= BOTONES GLOBAL ================= */
+
   .btn {
     width: 100%;
     max-width: 320px;
@@ -9,54 +59,18 @@
     font-size: 0.95rem;
   }
 
-  .hero-modern {
-    background: #f9f8fc;
-  }
-
-  /* Cuando estén juntos */
-  .hero-modern__buttons {
-    flex-direction: column;
-    align-items: stretch;
-    /* 👈 importante */
-  }
-
-  .hero-modern__buttons .btn {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .hero-modern__buttons .btn {
-    box-sizing: border-box;
-  }
-
-  .interactive-modern {
-    padding: 7rem 2rem;
-  }
-
-  .diff-grid {
-    padding: 0 0.5rem;
-  }
-
-  /* Más espacio alrededor de las cards */
-  .interactive-modern {
-    padding: 6rem 1.5rem;
-  }
-
-  /* Separación entre card y contenedor */
-  .diff-card {
-    margin: 0 0.5rem;
-  }
-
   /* ================= HEADER ================= */
+
   .nav-modern {
     position: absolute;
     top: 80px;
     left: 0;
     width: 100%;
-    background: white;
+    background: #fff;
     flex-direction: column;
     padding: 2rem;
     display: none;
+    gap: 1.5rem;
   }
 
   .nav-modern.active {
@@ -67,27 +81,9 @@
     display: block;
   }
 
-  .hero-modern__grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-modern__content p {
-    margin: 0 auto 2rem;
-  }
-
-  .hero-modern__buttons {
-    justify-content: center;
-  }
-
-  .hero-floating-card {
-    position: static;
-    margin-top: 2rem;
-  }
-
-  .header__content {
-    min-height: 64px;
-    padding: 0.8rem 1.2rem;
+  .header-modern__content {
+    height: 64px;
+    padding: 0 1.2rem;
   }
 
   .logo__icon {
@@ -98,51 +94,22 @@
     font-size: 0.95rem;
   }
 
-  .nav-toggle {
-    display: flex;
-    margin-left: auto;
-  }
-
-  .nav {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
-    display: none;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
   /* ================= SECTIONS ================= */
 
-  .interactive-modern__features {
-    margin: 0 auto;
+  section {
+    padding: 4rem 0;
   }
 
-  .feature-group {
-    margin-bottom: 2rem;
+  .interactive-modern {
+    padding: 5rem 1.5rem;
   }
 
   .interactive-modern__grid,
-  .packages-grid {
+  .packages-grid,
+  .events-modern__grid,
+  .diff-grid,
+  .process-modern__wrapper {
     grid-template-columns: 1fr;
-  }
-
-  .interactive-modern__video {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .interactive-modern__media,
-  .interactive-modern__content {
-    width: 100%;
   }
 
   .interactive-modern__media {
@@ -150,8 +117,8 @@
     justify-content: center;
   }
 
-  .diff-grid {
-    grid-template-columns: 1fr;
+  .interactive-modern__video {
+    width: 100%;
   }
 
   .diff-card--highlight {
@@ -159,34 +126,9 @@
     transform: none;
   }
 
-  .interactive-modern {
-    padding: 6rem 0;
-  }
-
-  .sections__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .process-modern__wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .events-modern__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .packages-modern {
-    padding: 5rem 0;
-  }
-
-  .packages-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
   .package-card {
-    padding: 2rem 1.5rem;
-    border-radius: 20px;
+    padding: 1.8rem 1.4rem;
+    border-radius: 18px;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   }
 
@@ -195,14 +137,10 @@
     transform: none;
   }
 
-  .packages-category__title::before,
-  .packages-category__title::after {
-    width: 20%;
-  }
-
   /* ================= CTA ================= */
+
   .cta {
-    padding: 6rem 0;
+    padding: 5rem 0;
   }
 
   .cta h2 {
@@ -225,33 +163,11 @@
     gap: 1.8rem;
   }
 
-  .footer__brand {
-    max-width: 100%;
-  }
-
   .footer__description {
     font-size: 0.85rem;
-    line-height: 1.7;
-    max-width: 340px;
+    line-height: 1.6;
+    max-width: 320px;
     margin: 0 auto;
-  }
-
-  .footer__social-icons {
-    gap: 12px;
-  }
-
-  .footer__social-icons a {
-    width: 34px;
-    height: 34px;
-  }
-
-  .footer__whats a {
-    justify-content: center;
-    font-size: 0.8rem;
-  }
-
-  .footer__cta {
-    text-align: center;
   }
 
   .footer__cta .btn {
@@ -260,35 +176,10 @@
     font-size: 0.9rem;
   }
 
-  .footer__description {
-    font-size: 0.82rem;
-    line-height: 1.6;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .footer__bottom {
-    font-size: 0.65rem;
-    margin-top: 2rem;
-  }
-
-  .footer__divider {
-    margin: 0 auto 1.5rem;
-    opacity: 0.6;
-  }
-
-  .footer__cta-text {
-    font-size: 0.8rem;
-    opacity: 0.85;
-  }
-
-  .footer__cta-text {
-    width: 100%;
-    text-align: center !important;
-  }
+  /* ================= FLOATING SOCIALS ================= */
 
   .floating-socials--top {
-    top: calc(80px + env(safe-area-inset-top));
+    top: calc(70px + env(safe-area-inset-top));
     right: 14px;
     gap: 12px;
   }
@@ -299,9 +190,10 @@
   }
 
   .social-btn img {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
+
 }
 
 @media (max-width: 480px) {

@@ -359,6 +359,114 @@
 }
 
 /* =====================================================
+   DIGITAL ADVANTAGE – ULTRA REFINED
+   ===================================================== */
+
+.digital-advantage {
+  padding: 7rem 0;
+}
+
+/* GRID más estrecho y centrado */
+.digital-advantage__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* CARD BASE */
+.adv-card {
+  padding: 2rem 1.9rem;
+  border-radius: 18px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+/* SIN hover exagerado */
+.adv-card:hover {
+  transform: translateY(-3px);
+}
+
+/* BADGE minimal */
+.adv-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Título más fino */
+.adv-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.02em;
+}
+
+/* LISTA SUPER LIMPIA */
+.adv-features {
+  display: flex;
+  flex-direction: column;
+}
+
+.adv-features p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.adv-features p:last-child {
+  border-bottom: none;
+}
+
+/* Tradicional muy tenue */
+.adv-card--muted {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+.adv-card--highlight {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fff9fc 100%
+  );
+  border: 1px solid rgba(238, 43, 108, 0.35);
+  box-shadow:
+    0 20px 45px rgba(238, 43, 108, 0.12),
+    0 0 0 1px rgba(238, 43, 108, 0.08);
+}
+
+/* Glow sutil */
+.adv-card--highlight::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at top,
+    rgba(238, 43, 108, 0.18),
+    transparent 60%
+  );
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .digital-advantage__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
    TIPOS DE EVENTOS
    ===================================================== */
 
@@ -977,3 +1085,53 @@
     transform: translateY(-6px);
   }
 }
+
+/* ===============================
+   REVEAL ANIMATIONS SYSTEM
+================================== */
+
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-stagger {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Direcciones */
+
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal-scale {
+  transform: scale(0.9);
+}
+
+.reveal-stagger {
+  transform: translateY(40px);
+}
+
+/* Estado visible */
+
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible,
+.reveal-stagger.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Delays para cascada */
+
+.reveal--d1 { transition-delay: 0.1s; }
+.reveal--d2 { transition-delay: 0.2s; }
+.reveal--d3 { transition-delay: 0.3s; }
+.reveal--d4 { transition-delay: 0.4s; }
+.reveal--d5 { transition-delay: 0.5s; }
