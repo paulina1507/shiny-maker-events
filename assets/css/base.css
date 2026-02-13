@@ -51,23 +51,33 @@ section::after {
 }
 
 .interactive-modern {
-  background: var(--color-surface);
+    background:
+    url("../img/6.png") center/cover no-repeat;
 }
 
 .digital-advantage {
-  background: var(--color-section);
+  background:
+    url("../img/5.png") center/cover no-repeat;
 }
 
 .events-modern {
-  background: var(--color-surface);
+    background:
+    url("../img/6.png") center/cover no-repeat;
 }
 
 .packages-modern {
-  background: var(--color-section);
+  background:
+    url("../img/5.png") center/cover no-repeat;
 }
 
 .process-modern {
-  background: var(--color-surface);
+    background:
+    url("../img/6.png") center/cover no-repeat;
+}
+
+.faq-modern {
+  background:
+    url("../img/5.png") center/cover no-repeat;
 }
 
 .fade-up {
@@ -99,12 +109,36 @@ section::after {
    HERO MODERNO
    ========================= */
 .hero-modern {
-  min-height: 85vh;
+  min-height: 100vh;
+  padding-top: 80px;
   display: flex;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 0;
+  position: relative;
+  background: url("../img/hero.png") center/cover no-repeat;
+  background-attachment: fixed;
+}
 
-  background: url("../img/hero-.png") center/cover no-repeat;
+.hero-modern__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 8rem;
+}
+
+.hero-modern__image {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .hero-modern__gradient {
@@ -118,7 +152,8 @@ section::after {
     rgba(238, 43, 108, 0.15),
     transparent 70%
   );
-  z-index: 0;
+
+  z-index: 1;
 }
 
 /* GRID */
@@ -188,6 +223,7 @@ section::after {
   align-items: center;
   justify-content: center;
   position: relative;
+  transform: translateY(20px);
 }
 
 .hero-modern__image img {

@@ -1,17 +1,14 @@
 @media (max-width: 768px) {
-
   /* ================= HERO ================= */
 
   .hero-modern {
-    min-height: auto;
-    padding-top: 7rem;
-    padding-bottom: 3rem;
+    background-attachment: scroll;
+    min-height: calc(100vh - 80px);
   }
 
   .hero-modern__grid {
     grid-template-columns: 1fr;
-    gap: 2.2rem;
-    text-align: center;
+    gap: 1.8rem;
   }
 
   .hero-modern__content {
@@ -22,18 +19,19 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 420px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 
   .hero-modern__image {
     order: 2;
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: -10px;
   }
 
   .hero-modern__image img {
-    max-width: 240px;
-    width: 100%;
+    width: clamp(260px, 70vw, 360px);
+    max-width: 360px;
   }
 
   /* BOTONES HERO */
@@ -194,6 +192,20 @@
     height: 30px;
   }
 
+  .interactive-modern,
+  .events-modern,
+  .process-modern{
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #ffffff; /* o tu color base */
+  }
+
+    .footer {
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
 }
 
 @media (max-width: 480px) {
