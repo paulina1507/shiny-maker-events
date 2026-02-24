@@ -57,6 +57,109 @@
     font-size: 0.95rem;
   }
 
+  /* ================= SECCIÓN CATALOGO MOBILE FIX ================= */
+  /* ===== FIX FEATURES MOBILE ===== */
+
+  .interactive-modern__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .feature-group {
+    width: 100%;
+    min-width: unset;
+    padding: 1.4rem;
+    box-sizing: border-box;
+  }
+
+  .feature-group h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .feature-group ul {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .feature-group li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .interactive-modern__media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .event-copy {
+    text-align: center;
+  }
+
+  .catalog-cta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .catalog-cta .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .event-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 1.8rem;
+  }
+
+  .event-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 18px 12px;
+    border-radius: 20px;
+
+    background: #ffffff;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+  }
+
+  .event-tab img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.85;
+    transition: all 0.25s ease;
+  }
+
+  /* efecto al tocar */
+  .event-tab:active {
+    transform: scale(0.97);
+  }
+
+  /* estado activo */
+  .event-tab.is-active {
+    border: 2px solid #ee2b6c;
+    background: #fff5f9;
+    box-shadow: 0 12px 28px rgba(238, 43, 108, 0.18);
+  }
+
+  .event-tab.is-active img {
+    opacity: 1;
+  }
   /* ================= HEADER ================= */
 
   .nav-modern {
@@ -193,15 +296,14 @@
   }
 
   .interactive-modern,
-  .events-modern,
-  .process-modern{
+  .process-modern {
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #ffffff; /* o tu color base */
   }
 
-    .footer {
+  .footer {
     background-size: contain;
     background-position: center top;
     background-repeat: no-repeat;

@@ -223,3 +223,47 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedElements.forEach(el => observer.observe(el));
 
 });
+
+(() => {
+  const tabs = document.querySelectorAll(".event-tab");
+  const video = document.getElementById("catalogVideo");
+  const source = document.getElementById("catalogVideoSource");
+  const title = document.getElementById("eventTitle");
+  const desc = document.getElementById("eventDesc");
+  const quoteBtn = document.getElementById("eventQuoteBtn");
+
+  if (!tabs.length || !video || !source || !title || !desc || !quoteBtn) return;
+
+  let currentEvent = "boda";
+
+  function setActiveTab(tab) {
+    tabs.forEach(t => {
+      t.classList.remove("is-active");
+      t.setAttribute("aria-selected", "false");
+    });
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
+  }
+
+  function switchVideo(src) {
+    if (source.getAttribute("src") === src) return;
+    source.setAttribute("src", src);
+    video.load();
+    video.play().catch(() => {});
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      currentEvent = tab.dataset.event;
+      setActiveTab(tab);
+      switchVideo(tab.dataset.video);
+      title.textContent = tab.dataset.title || "";
+      desc.textContent = tab.dataset.desc || "";
+    });
+  });
+
+  quoteBtn.addEventListener("click", () => {
+    // Usa tu función existente
+    if (typeof openWhatsApp === "function") openWhatsApp(currentEvent);
+  });
+})();

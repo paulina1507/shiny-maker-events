@@ -67,8 +67,7 @@
 
         <nav class="nav-modern">
           <a href="#inicio">Inicio</a>
-          <a href="#interactiva">Qué incluye</a>
-          <a href="#eventos">Eventos</a>
+          <a href="#interactiva">Ejemplos</a>
           <a href="#paquetes">Precios</a>
           <a href="#proceso">Cómo funciona</a>
           <a href="#faq">Preguntas</a>
@@ -120,13 +119,13 @@
       <div class="container hero-modern__grid">
         <!-- TEXTO -->
         <div class="hero-modern__content">
-          <span class="hero-badge">Experiencia Interactiva</span>
+          <span class="hero-badge">Interactivas</span>
 
           <h1 class="hero-title-special">
-            Invitaciones digitales que se recuerdan
+            Invitaciones digitales tipo web
           </h1>
 
-          <p>Link único con mapa, detalles y confirmación automática.</p>
+          <p>Incluye música, galería, mapa y confirmación automática para que tengas todo organizado en un solo lugar.</p>
 
           <!-- CONTADOR -->
           <div class="hero-counter hero-counter--inline">
@@ -138,7 +137,7 @@
           <div class="hero-modern__buttons">
             <a href="#paquetes" class="btn btn--primary"> Ver Paquetes </a>
 
-            <a class="btn btn--primary" onclick="openWhatsApp('general')">
+            <a class="btn btn--outline" onclick="openWhatsApp('general')">
               Cotizar
             </a>
           </div>
@@ -151,25 +150,107 @@
       </div>
     </section>
 
-    <!-- INVITACIÓN INTERACTIVA -->
-    <!-- BLOQUE B · MOCKUP + FUNCIONES -->
-    <section id="interactiva" class="interactive-modern">
+    <section id="catalogo" class="interactive-modern">
       <div class="section-header-center">
-        <h2>Más que una invitación</h2>
+        <h2>Elige tu evento</h2>
+        <p>Mira un ejemplo real como se verá en el celular.</p>
       </div>
+
+      <!-- TABS -->
+      <div class="event-tabs" role="tablist" aria-label="Tipos de evento">
+        <button
+          class="event-tab is-active"
+          role="tab"
+          aria-selected="true"
+          data-event="boda"
+          data-video="assets/video/boda.mp4"
+          data-title="Bodas"
+          data-desc="Porque ese día merece que cada detalle esté perfecto."
+        >
+          <img src="assets/svg/boda.svg" alt="" />
+          <span>Bodas</span>
+        </button>
+
+        <button
+          class="event-tab"
+          role="tab"
+          aria-selected="false"
+          data-event="xv"
+          data-video="assets/video/xv.mp4"
+          data-title="XV Años"
+          data-desc="Tu fiesta empieza desde la invitación."
+        >
+          <img src="assets/svg/xv.svg" alt="" />
+          <span>XV Años</span>
+        </button>
+
+        <button
+          class="event-tab"
+          role="tab"
+          aria-selected="false"
+          data-event="bautizo"
+          data-video="assets/video/bautizo.mp4"
+          data-title="Bautizos"
+          data-desc="Delicada, bonita y pensada para compartir en familia."
+        >
+          <img src="assets/svg/bautizo.svg" alt="" />
+          <span>Bautizo</span>
+        </button>
+
+        <button
+          class="event-tab"
+          role="tab"
+          aria-selected="false"
+          data-event="cumple"
+          data-video="assets/video/cumple.mp4"
+          data-title="Cumpleaños"
+          data-desc="Desde algo tierno hasta algo súper temático.
+Tú dime la idea y yo la hago realidad."
+        >
+          <img src="assets/svg/cumple.svg" alt="" />
+          <span>Cumple</span>
+        </button>
+      </div>
+
       <div class="interactive-modern__grid">
         <!-- MOCKUP -->
         <div class="interactive-modern__media reveal-left">
+          <p class="mockup-label">
+            Así se ve en el celular (sin descargar apps)
+          </p>
+
           <div class="phone-mockup">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="assets/video/boda.mp4" type="video/mp4" />
+            <video
+              id="catalogVideo"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source
+                id="catalogVideoSource"
+                src="assets/video/boda.mp4"
+                type="video/mp4"
+              />
             </video>
+          </div>
+
+          <div class="event-copy">
+            <h3 id="eventTitle">Bodas</h3>
+            <p id="eventDesc">Elegancia digital para el día más importante.</p>
+          </div>
+
+          <div class="catalog-cta">
+            <button id="eventQuoteBtn" class="btn btn--primary" type="button">
+              Cotizar este evento
+            </button>
+            <a href="#paquetes" class="btn btn--outline">Ver paquetes</a>
           </div>
         </div>
 
-        <!-- FUNCIONES AGRUPADAS -->
+        <!-- FEATURES (reutilizas lo tuyo tal cual) -->
         <div class="interactive-modern__features reveal-right">
-          <!-- EXPERIENCIA -->
           <div class="feature-group">
             <h4 class="feature-title">
               <img
@@ -221,6 +302,7 @@
           </div>
         </div>
       </div>
+
       <div class="interactive-modern__divider"></div>
     </section>
 
@@ -256,65 +338,6 @@
           </div>
 
           <a href="#paquetes" class="btn btn--primary"> Ver Paquetes </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- TIPOS DE EVENTOS -->
-    <section id="eventos" class="events-modern">
-      <div class="container">
-        <div class="section-header-center">
-          <h2>Elige tu tipo de evento</h2>
-          <p>
-            Diseñamos invitaciones digitales adaptadas al estilo y personalidad
-            de cada evento.
-          </p>
-        </div>
-
-        <div class="events-modern__grid">
-          <article class="event-card-modern reveal-stagger reveal--d1">
-            <div class="event-icon-modern">
-              <img src="assets/svg/boda.svg" alt="Bodas" />
-            </div>
-            <h3>Bodas</h3>
-            <p>Elegancia digital para el día más importante.</p>
-            <button class="event-card__cta" onclick="openWhatsApp('boda')">
-              Cotizar este evento
-            </button>
-          </article>
-
-          <article class="event-card-modern reveal-stagger reveal--d2">
-            <div class="event-icon-modern">
-              <img src="assets/svg/xv.svg" alt="XV Años" />
-            </div>
-            <h3>XV Años</h3>
-            <p>Diseños vibrantes y modernos para tu gran fiesta.</p>
-            <button class="event-card__cta" onclick="openWhatsApp('xv')">
-              Cotizar este evento
-            </button>
-          </article>
-
-          <article class="event-card-modern reveal-stagger reveal--d3">
-            <div class="event-icon-modern">
-              <img src="assets/svg/bautizo.svg" alt="Bautizo" />
-            </div>
-            <h3>Bautizos</h3>
-            <p>Estilo delicado para celebrar en familia.</p>
-            <button class="event-card__cta" onclick="openWhatsApp('bautizo')">
-              Cotizar este evento
-            </button>
-          </article>
-
-          <article class="event-card-modern reveal-stagger reveal--d4">
-            <div class="event-icon-modern">
-              <img src="assets/svg/cumple.svg" alt="Cumple" />
-            </div>
-            <h3>Cumpleaños</h3>
-            <p>Desde infantiles hasta temáticos.</p>
-            <button class="event-card__cta" onclick="openWhatsApp('cumple')">
-              Cotizar este evento
-            </button>
-          </article>
         </div>
       </div>
     </section>

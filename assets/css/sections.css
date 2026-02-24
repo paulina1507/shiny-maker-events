@@ -13,6 +13,37 @@
 /* =====================================================
    SECCIONES GENERALES
    ===================================================== */
+.interactive-modern__features{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:32px;
+  margin-top:60px;
+  max-width:1000px;
+}
+
+.feature-group{
+  background:#ffffff;
+  padding:28px 26px;
+  border-radius:20px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+  transition:all .25s ease;
+}
+
+.feature-group:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 36px rgba(0,0,0,.08);
+}
+
+.section-header-center{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 40px;
+}
+
+.section-header-center h2{
+  font-size:2.6rem;
+  margin-bottom:14px;
+}
 
 .sections__grid {
   display: grid;
@@ -92,12 +123,11 @@
   margin-bottom: 1rem;
 }
 
-.interactive-modern__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  margin-bottom: 5rem;
+.interactive-modern__grid{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
 }
 
 /* ================= MEDIA ================= */
@@ -160,24 +190,27 @@
 }
 
 /* ================= FEATURES ================= */
-.feature-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: var(--color-primary);
+.feature-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:1.1rem;
+  font-weight:600;
+  margin-bottom:18px;
+  color:#ee2b6c;
 }
 
-.feature-icon {
-  width: 34px;
-  height: 34px;
+.feature-icon{
+  width:26px;
+  height:26px;
 }
 
-.interactive-modern__features {
-  display: grid;
-  gap: 2.5rem;
+.interactive-modern__features{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:40px;
+  margin-top:60px;
+  max-width:1000px;
 }
 
 .feature-group h4 {
@@ -187,30 +220,17 @@
   color: var(--color-primary);
 }
 
-.feature-group ul {
+/* ===== QUITAR BULLETS FEATURES ===== */
+
+.feature-group ul{
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  margin: 0;
 }
 
-.feature-group li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 0.6rem;
-  font-size: 0.95rem;
-  color: #3f4752;
+.feature-group li{
+  list-style: none;
 }
-
-.feature-group li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 6px;
-  height: 6px;
-  background: var(--color-primary);
-  border-radius: 50%;
-}
-
 /* ================= COMPARATIVA ================= */
 
 .interactive-modern__compare {
@@ -459,120 +479,56 @@
   }
 }
 
-/* =====================================================
-   TIPOS DE EVENTOS
-   ===================================================== */
+/* ================= TABS DESKTOP ================= */
 
-.events-modern {
-  padding: 7rem 0;
+.event-tabs{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin:30px 0 40px;
 }
 
-.event-icon-modern {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1.4rem;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(238, 43, 108, 0.1);
-  transition: 0.3s ease;
+.event-tab{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:14px 24px;
+  border-radius:30px;
+
+  background:#fff;
+  border:1.5px solid rgba(0,0,0,.12);
+
+  font-size:1rem;
+  font-weight:500;
+
+  cursor:pointer;
+  transition:all .25s ease;
 }
 
-.event-icon-modern img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
+.event-tab img{
+  width:22px;
+  height:22px;
+  opacity:.85;
+  transition:all .25s ease;
 }
 
-.section-header-center {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 4rem;
+/* Hover elegante */
+.event-tab:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(0,0,0,.08);
+  border-color:rgba(0,0,0,.25);
 }
 
-.section-header-center h2 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
+/* Activo */
+.event-tab.is-active{
+  border:1.5px solid #ee2b6c;
+  background:#fff5f9;
+  box-shadow:0 12px 30px rgba(238,43,108,.18);
 }
 
-.section-header-center p {
-  color: var(--color-text-muted);
-  font-size: 1rem;
-}
-
-/* GRID */
-.events-modern__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-/* CARD */
-.event-card-modern {
-  background: var(--color-surface);
-  border-radius: 24px;
-  padding: 2.5rem 2rem;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: var(--shadow-soft);
-  transition: 0.35s ease;
-}
-
-.event-card-modern:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-strong);
-}
-
-/* ICONO */
-.event-icon-modern {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1.4rem;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  background: rgba(238, 43, 108, 0.1);
-  color: var(--color-primary);
-  transition: 0.3s ease;
-}
-
-.event-card-modern:hover .event-icon-modern {
-  transform: scale(1.1);
-  background: var(--color-primary);
-  color: #ffffff;
-}
-
-/* TEXTO */
-.event-card-modern h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
-  font-weight: 700;
-}
-
-.event-card-modern p {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  margin-bottom: 1.4rem;
-}
-
-/* BOTÓN */
-.event-card-modern .event-card__cta {
-  background: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.event-card-modern .event-card__cta:hover {
-  background: var(--color-primary);
-  color: #ffffff;
+.event-tab.is-active img{
+  opacity:1;
 }
 
 /* =====================================================

@@ -248,19 +248,20 @@
   color: #888;
 }
 
-.package-card ul {
-  list-style: none;
-  padding: 0;
+.feature-group li{
+  position:relative;
+  padding-left:22px;
+  margin-bottom:14px;
 }
 
-/* LISTA */
-.package-card ul li {
-  position: relative;
-  padding-left: 22px;
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.4;
+.feature-group li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#ee2b6c;
+  font-size:.9rem;
+  font-weight:600;
 }
 
 .package-card ul li::before {
@@ -553,11 +554,6 @@ footer {
   text-decoration: none;
 }
 
-.footer__whats a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
 .footer__social-icons a img {
   pointer-events: none;
 }
@@ -569,6 +565,11 @@ footer {
   background: #25d366;
   padding: 8px;
   border-radius: 50%;
+}
+
+.footer__whats img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 /* ---------- CTA ---------- */
 
