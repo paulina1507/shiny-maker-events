@@ -10,7 +10,8 @@
 
   padding: 0.85rem 1.8rem;
 
-  border-radius: 999px; /* 👈 totalmente redondeado */
+  border-radius: 999px;
+  /* 👈 totalmente redondeado */
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
@@ -24,7 +25,7 @@
   background-color: var(--color-primary);
   color: #ffffff;
   border: none;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .btn--primary:hover {
@@ -63,12 +64,15 @@
   0% {
     transform: scale(1);
   }
+
   40% {
     transform: scale(1.12);
   }
+
   70% {
     transform: scale(0.98);
   }
+
   100% {
     transform: scale(1.05);
   }
@@ -134,14 +138,17 @@
 }
 
 @keyframes badgePulse {
+
   0%,
   100% {
     opacity: 0.9;
   }
+
   50% {
     opacity: 1;
   }
 }
+
 /* =========================
    CARDS BASE (REUTILIZABLES)
    ========================= */
@@ -194,14 +201,18 @@
 
 /* CARD */
 .package-card {
-  background: #f2f2f2;
   border-radius: 24px;
   padding: 2.5rem 2rem;
-  border: none;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #faf7f9 100%);
+  border: 1px solid rgba(238, 43, 108, 0.08);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(238, 43, 108, 0.05);
 }
 
 .package-card:hover {
@@ -236,10 +247,15 @@
 
 /* PRECIO */
 .package-price {
-  font-size: 1.8rem;
-  font-weight: 800;
   color: var(--color-primary);
   margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg,
+      #ee2b6c,
+      #ff6fa3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .package-price span {
@@ -248,29 +264,20 @@
   color: #888;
 }
 
-.feature-group li{
-  position:relative;
-  padding-left:22px;
-  margin-bottom:14px;
+.feature-group li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 14px;
 }
 
-.feature-group li::before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  top:0;
-  color:#ee2b6c;
-  font-size:.9rem;
-  font-weight:600;
-}
-
-.package-card ul li::before {
-  content: "✔";
+.feature-group li::before {
+  content: "✓";
   position: absolute;
   left: 0;
-  top: 2px;
-  font-size: 0.7rem;
-  color: var(--color-primary);
+  top: 0;
+  color: #ee2b6c;
+  font-size: .9rem;
+  font-weight: 600;
 }
 
 /* BOTONES */
@@ -364,9 +371,12 @@
   pointer-events: auto;
   isolation: isolate;
 
-  display: flex; /* 👈 FALTABA */
-  flex-direction: column; /* 👈 vertical */
-  gap: 14px; /* 👈 espacio entre botones */
+  display: flex;
+  /* 👈 FALTABA */
+  flex-direction: column;
+  /* 👈 vertical */
+  gap: 14px;
+  /* 👈 espacio entre botones */
 }
 
 /* BOTÓN */
@@ -377,7 +387,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000; /* fallback */
+  background: #000;
+  /* fallback */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   transition:
     transform 0.3s ease,
@@ -402,9 +413,11 @@
 .social-btn.whatsapp {
   background: #25d366;
 }
+
 .social-btn.instagram {
   background: #e1306c;
 }
+
 .social-btn.facebook {
   background: #1877f2;
 }
@@ -414,9 +427,7 @@
    ===================================================== */
 footer {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("../img/hero.png") center/cover no-repeat;
   color: #000;
   padding: 3.2rem 0 1.6rem;
   overflow: hidden;
@@ -424,15 +435,12 @@ footer {
   animation: footerFade 0.8s ease forwards;
 }
 
-.footer {
-  background: url("../img/6.png") center/cover no-repeat;
-}
-
 @keyframes footerFade {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -442,14 +450,18 @@ footer {
 .footer .container {
   position: relative;
   z-index: 1;
-} /* Línea decorativa */
+}
+
+/* Línea decorativa */
 
 .footer__divider {
   width: 64px;
   height: 1px;
   background: rgba(255, 255, 255, 0.35);
   margin: 0 auto 2rem;
-} /* GRID PRINCIPAL */
+}
+
+/* GRID PRINCIPAL */
 
 .footer__content {
   display: grid;
@@ -458,7 +470,9 @@ footer {
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
-} /* ---------- MARCA ---------- */
+}
+
+/* ---------- MARCA ---------- */
 
 .footer__brand {
   max-width: 420px;
@@ -480,7 +494,9 @@ footer {
   font-size: 0.75rem;
   margin-top: 0.4rem;
   color: #000
-} /* ---------- CENTRO · REDES ---------- */
+}
+
+/* ---------- CENTRO · REDES ---------- */
 
 .footer__socials {
   text-align: center;
@@ -525,7 +541,7 @@ footer {
 
 .footer__social-icons a:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .footer__social-icons img {
@@ -533,23 +549,28 @@ footer {
   height: auto;
   object-fit: contain;
   display: block;
-} /* WhatsApp */
+}
+
+/* WhatsApp */
 
 .footer__whats {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 👈 centra todo */
+  align-items: center;
+  /* 👈 centra todo */
   gap: 0.6rem;
 }
 
 .footer__whats a {
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* 👈 centra icono + texto */
+  justify-content: center;
+  /* 👈 centra icono + texto */
   gap: 10px;
 
   font-size: 0.9rem;
-  font-weight: 400; /* 👈 sin negrita */
+  font-weight: 400;
+  /* 👈 sin negrita */
   color: #000;
   text-decoration: none;
 }
@@ -569,8 +590,9 @@ footer {
 
 .footer__whats img:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
+
 /* ---------- CTA ---------- */
 
 .footer__cta {
@@ -588,11 +610,9 @@ footer {
 }
 
 .footer::before {
-  background: linear-gradient(
-    to top,
-    rgba(25, 18, 60, 0.92),
-    rgba(60, 35, 110, 0.75)
-  );
+  background: linear-gradient(to top,
+      rgba(25, 18, 60, 0.92),
+      rgba(60, 35, 110, 0.75));
 }
 
 /* ---------- BOTTOM ---------- */
@@ -603,4 +623,48 @@ footer {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.65);
   border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.particles-rose {
+  position: relative;
+  overflow: hidden;
+}
+
+.particles-rose::before,
+.particles-rose::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particles-rose::before {
+  background-image:
+    radial-gradient(rgba(225, 23, 208, 0.6) 4px, transparent 1px),
+    radial-gradient(rgba(190, 115, 169, 0.4) 3px, transparent 1px);
+
+  background-size: 120px 120px, 180px 180px;
+  animation: driftSlow 45s linear infinite;
+  opacity: 0.5;
+}
+
+.particles-rose::after {
+  background-image:
+    radial-gradient(rgba(49, 152, 109, 0.25) 3px, transparent 3px),
+    radial-gradient(rgba(229, 17, 165, 0.18) 4px, transparent 4px);
+
+  background-size: 260px 260px, 340px 340px;
+  animation: driftSlowReverse 70s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes driftSlow {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 1200px, 0 800px; }
+}
+
+@keyframes driftSlowReverse {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 -1000px, 0 -700px; }
 }

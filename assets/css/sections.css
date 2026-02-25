@@ -96,21 +96,39 @@
 .interactive-modern {
   padding: 5rem 0;
   position: relative;
+  overflow: hidden;
+}
+
+.interactive-modern > * {
+  position: relative;
+  z-index: 1;
 }
 
 .interactive-modern::before {
   content: "";
   position: absolute;
-  top: -150px;
-  right: -150px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(238, 43, 108, 0.06),
-    transparent 70%
-  );
+  transform: translateX(10%);
+  top: 18%;
+  width: 420px;
+  height: 420px;
+  background: url("../img/acuarela.png") no-repeat center/contain;
+  opacity: 0.22;
   pointer-events: none;
+  z-index: 0;
+}
+
+.interactive-modern::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 42%;
+  transform: translateX(100%);
+  width: 380px;
+  height: 380px;
+  background: url("../img/acuarela.png") no-repeat center/contain;
+  opacity: 0.20;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .interactive-modern__intro {
