@@ -927,7 +927,7 @@
   box-shadow: var(--shadow-soft);
   padding: 0 1.6rem;
   transition: 0.35s ease;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 6px solid rgba(238, 43, 108, 0.08);
 }
 
 .faq-item:hover {
