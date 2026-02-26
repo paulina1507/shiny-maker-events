@@ -121,11 +121,12 @@
         <div class="hero-modern__content">
           <span class="hero-badge">Interactivas</span>
 
-          <h1 class="hero-title-special">
-            Invitaciones digitales
-          </h1>
+          <h1 class="hero-title-special">Invitaciones digitales</h1>
 
-          <p>Incluye música, galería, mapa y confirmación para que tengas todo organizado en un solo lugar.</p>
+          <p>
+            Incluye música, galería, mapa y confirmación para que tengas todo
+            organizado en un solo lugar.
+          </p>
 
           <!-- CONTADOR -->
           <div class="hero-counter hero-counter--inline">
@@ -357,7 +358,13 @@ Tú dime la idea y yo la hago realidad."
             <!-- ESENCIA -->
             <div class="package-card reveal-stagger reveal--d1">
               <h4>Paquete Esencia</h4>
-              <div class="package-price">$600 <span>MXN</span></div>
+
+              <div class="package-price-wrapper">
+                <span class="package-price-old">$800</span>
+                <span class="package-price">$600 <span>MXN</span></span>
+              </div>
+
+              <span class="package-save">Ahorra $200</span>
 
               <ul>
                 <li>Canción personalizada</li>
@@ -377,11 +384,19 @@ Tú dime la idea y yo la hago realidad."
             </div>
 
             <!-- ARMONÍA -->
-            <div class="package-card package-card--featured">
-              <div class="package-badge">Recomendado</div>
+            <div
+              class="package-card package-card--featured reveal-stagger reveal--d2"
+            >
+              <div class="package-badge">Más elegido</div>
 
               <h4>Paquete Armonía</h4>
-              <div class="package-price">$1,200 <span>MXN</span></div>
+
+              <div class="package-price-wrapper">
+                <span class="package-price-old">$1,600</span>
+                <span class="package-price">$1,200 <span>MXN</span></span>
+              </div>
+
+              <span class="package-save">Ahorra $400</span>
 
               <ul>
                 <li>Todo lo del paquete Esencia</li>
@@ -400,17 +415,19 @@ Tú dime la idea y yo la hago realidad."
             </div>
           </div>
         </div>
-
-        <!-- CUMPLEAÑOS -->
         <div class="packages-category">
           <h3 class="packages-category__title">Cumpleaños | Bautizo</h3>
 
           <div class="packages-grid">
-            <div
-              class="package-card package-card--featured reveal-stagger reveal--d2"
-            >
+            <div class="package-card reveal-stagger reveal--d1">
               <h4>Paquete Fiesta</h4>
-              <div class="package-price">$350 <span>MXN</span></div>
+
+              <div class="package-price-wrapper">
+                <span class="package-price-old">$550</span>
+                <span class="package-price">$350 <span>MXN</span></span>
+              </div>
+
+              <span class="package-save">Ahorra $200</span>
 
               <ul>
                 <li>Diseño temático</li>
@@ -423,9 +440,19 @@ Tú dime la idea y yo la hago realidad."
               <button class="btn btn--outline">Seleccionar</button>
             </div>
 
-            <div class="package-card">
+            <div
+              class="package-card package-card--featured reveal-stagger reveal--d2"
+            >
+              <div class="package-badge">Más completo</div>
+
               <h4>Paquete Fiesta Plus</h4>
-              <div class="package-price">$600 <span>MXN</span></div>
+
+              <div class="package-price-wrapper">
+                <span class="package-price-old">$850</span>
+                <span class="package-price">$600 <span>MXN</span></span>
+              </div>
+
+              <span class="package-save">Ahorra $250</span>
 
               <ul>
                 <li>Todo lo del Fiesta</li>
@@ -433,7 +460,7 @@ Tú dime la idea y yo la hago realidad."
                 <li>Lista simple de invitados</li>
               </ul>
 
-              <button class="btn btn--outline">Seleccionar</button>
+              <button class="btn btn--primary">Contratar Ahora</button>
             </div>
           </div>
         </div>
@@ -557,10 +584,7 @@ Tú dime la idea y yo la hago realidad."
           <!-- MARCA -->
           <div class="footer__brand">
             <h3>© Shiny Maker Studio</h3>
-            <p class="footer__description">
-              Invitaciones digitales para bodas, XV años y momentos que merecen
-              recordarse.
-            </p>
+            <p class="footer__description"></p>
             <p class="footer__trust">
               Diseño personalizado · Acompañamiento real · Entrega rápida
             </p>
