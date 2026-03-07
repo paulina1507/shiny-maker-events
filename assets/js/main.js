@@ -17,6 +17,63 @@ if (menuToggle && navModern) {
   });
 }
 
+const videos = {
+boda:[
+"assets/video/boda.mp4",
+"assets/video/boda2.mp4",
+"assets/video/boda3.mp4"
+],
+
+xv:[
+"assets/video/xv.mp4",
+"assets/video/xv2.mp4"
+],
+
+bautizo:[
+"assets/video/bautizo.mp4",
+"assets/video/bautizo2.mp4"
+],
+
+cumple:[
+"assets/video/cumple.mp4",
+"assets/video/cumple2.mp4",
+"assets/video/cumple3.mp4"
+]
+}
+
+let currentEvent="boda"
+let currentIndex=0
+
+const source=document.getElementById("catalogVideoSource")
+const player=document.getElementById("catalogVideo")
+
+function updateVideo(){
+source.src=videos[currentEvent][currentIndex]
+player.load()
+}
+
+document.querySelector(".video-next").onclick=()=>{
+currentIndex=(currentIndex+1)%videos[currentEvent].length
+updateVideo()
+}
+
+document.querySelector(".video-prev").onclick=()=>{
+currentIndex=(currentIndex-1+videos[currentEvent].length)%videos[currentEvent].length
+updateVideo()
+}
+
+document.querySelectorAll(".event-tab").forEach(tab=>{
+
+tab.addEventListener("click",()=>{
+
+currentEvent=tab.dataset.event
+currentIndex=0
+
+updateVideo()
+
+})
+
+})
 /* =========================
    REVEAL ON SCROLL
    ========================= */

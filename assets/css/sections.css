@@ -16,7 +16,7 @@
 .interactive-modern__features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 40px;
   margin-top: 60px;
   max-width: 1000px;
 }
@@ -162,6 +162,63 @@
     0 30px 60px rgba(0, 0, 0, 0.2),
     inset 0 0 0 2px rgba(255, 255, 255, 0.05);
   overflow: hidden;
+  z-index: 2;
+}
+
+.mockup-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.video-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.video-arrow:hover {
+  background: #ee2b6c;
+  transform: scale(1.1);
+}
+
+.video-prev {
+  left: -60px;
+}
+
+.video-next {
+  right: -60px;
+}
+
+@media (max-width: 768px) {
+
+  .video-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .video-prev {
+    left: -40px;
+  }
+
+  .video-next {
+    right: -40px;
+  }
+
 }
 
 .phone-mockup::before {
@@ -218,23 +275,10 @@
 }
 
 .feature-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  animation: floatIcon 6s ease-in-out infinite;
-  transition: transform 0.4s ease;
-}
-
-.feature-icon svg {
-  width: 26px;
-  height: 26px;
-  stroke: var(--color-primary);
-  fill: none;
-  stroke-width: 1.8;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 @keyframes floatIcon {
@@ -247,14 +291,6 @@
   100% {
     transform: translateY(0px);
   }
-}
-
-.interactive-modern__features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-top: 60px;
-  max-width: 1000px;
 }
 
 .feature-group h4 {
