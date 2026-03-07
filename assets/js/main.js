@@ -42,16 +42,24 @@ cumple:[
 let currentEvent="boda"
 let currentIndex=0
 
-const source=document.getElementById("catalogVideoSource")
 const player=document.getElementById("catalogVideo")
-
 const prevBtn=document.querySelector(".video-prev")
 const nextBtn=document.querySelector(".video-next")
 
 function updateVideo(){
-source.src=videos[currentEvent][currentIndex]
-player.load()
+
+player.style.opacity=0
+
+setTimeout(()=>{
+
+player.src = videos[currentEvent][currentIndex]
+player.play().catch(()=>{})
+player.style.opacity=1
+
 updateArrows()
+
+},150)
+
 }
 
 function updateArrows(){
@@ -91,7 +99,7 @@ updateVideo()
 
 })
 
-updateArrows()
+updateVideo()
 /* =========================
    REVEAL ON SCROLL
    ========================= */
