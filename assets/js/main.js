@@ -25,11 +25,13 @@ boda:[
 ],
 
 xv:[
-"assets/video/xv.mp4"
+"assets/video/xv.mp4",
+"assets/video/xv2.mp4"
 ],
 
 bautizo:[
-"assets/video/bautizo.mp4"
+"assets/video/bautizo.mp4",
+"assets/video/bautizo2.mp4"
 ],
 
 cumple:[
@@ -42,46 +44,20 @@ cumple:[
 let currentEvent="boda"
 let currentIndex=0
 
+const source=document.getElementById("catalogVideoSource")
 const player=document.getElementById("catalogVideo")
-const prevBtn=document.querySelector(".video-prev")
-const nextBtn=document.querySelector(".video-next")
 
 function updateVideo(){
-
-player.style.opacity=0
-
-setTimeout(()=>{
-
-player.src = videos[currentEvent][currentIndex]
-player.play().catch(()=>{})
-player.style.opacity=1
-
-updateArrows()
-
-},150)
-
+source.src=videos[currentEvent][currentIndex]
+player.load()
 }
 
-function updateArrows(){
-
-const total=videos[currentEvent].length
-
-if(total<=1){
-prevBtn.style.display="none"
-nextBtn.style.display="none"
-}else{
-prevBtn.style.display="flex"
-nextBtn.style.display="flex"
-}
-
-}
-
-nextBtn.onclick=()=>{
+document.querySelector(".video-next").onclick=()=>{
 currentIndex=(currentIndex+1)%videos[currentEvent].length
 updateVideo()
 }
 
-prevBtn.onclick=()=>{
+document.querySelector(".video-prev").onclick=()=>{
 currentIndex=(currentIndex-1+videos[currentEvent].length)%videos[currentEvent].length
 updateVideo()
 }
@@ -98,8 +74,6 @@ updateVideo()
 })
 
 })
-
-updateVideo()
 /* =========================
    REVEAL ON SCROLL
    ========================= */
