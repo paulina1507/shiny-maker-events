@@ -193,12 +193,15 @@
 /* GRID */
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
+.packages-category:last-child .packages-grid {
+  max-width: 450px;
+}
 /* CARD */
 .package-card {
   border-radius: 24px;
@@ -329,6 +332,16 @@
   font-size: 0.9rem;
 }
 
+.package-card .btn{
+margin-top: 28px;
+}
+
+.package-card li{
+  margin-bottom: 12px;
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
 /* Nota de paquete */
 .package-note {
   font-size: 0.75rem;
@@ -386,6 +399,32 @@
   background: rgba(238,43,108,0.08);
   padding: 4px 10px;
   border-radius: 999px;
+}
+
+.package-desc{
+font-size:.9rem;
+opacity:.75;
+margin-bottom:14px;
+}
+
+.package-card ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.package-card li{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.package-note{
+font-size:.85rem;
+opacity:.7;
+margin-top:10px;
+line-height:1.5;
 }
 
 .btn:focus-visible {

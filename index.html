@@ -1,638 +1,537 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Invitaciones Digitales para Bodas y XV Años | Shiny Maker Studio
-    </title>
 
-    <!-- SEO / Ads -->
-    <meta
-      name="description"
-      content="Invitaciones digitales interactivas para bodas, XV años y eventos. Con música, galería, RSVP y mapa. Recibe tu link listo para compartir por WhatsApp. Cotiza hoy."
-    />
-    <meta
-      name="keywords"
-      content="invitaciones digitales, invitaciones interactivas, invitaciones boda, invitaciones xv años"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Invitaciones Digitales para Bodas y XV Años | Shiny Maker Studio
+  </title>
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Invitación digital interactiva" />
-    <meta
-      property="og:description"
-      content="Canción, galería, cuenta regresiva y confirmación de asistencia."
-    />
-    <meta
-      property="og:image"
-      content="https://tudominio.com/assets/img/branding/og-cover.jpg"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/icons/favicon.ico" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link rel="stylesheet" href="assets/css/sections.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-  </head>
+  <!-- SEO / Ads -->
+  <meta name="description"
+    content="Invitaciones digitales interactivas para bodas, XV años y eventos. Con música, galería, RSVP y mapa. Recibe tu link listo para compartir por WhatsApp. Cotiza hoy." />
+  <meta name="keywords"
+    content="invitaciones digitales, invitaciones interactivas, invitaciones boda, invitaciones xv años" />
 
-  <body>
-    <!-- HEADER -->
-    <header class="header-modern">
-      <div class="container header-modern__content">
-        <div class="logo-modern">
-          <a href="#inicio" class="logo__link">
-            <img
-              src="assets/svg/destello.svg"
-              alt="Shiny Maker Studio"
-              class="logo__icon"
-            />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Invitación digital interactiva" />
+  <meta property="og:description" content="Canción, galería, cuenta regresiva y confirmación de asistencia." />
+  <meta property="og:image" content="https://tudominio.com/assets/img/branding/og-cover.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon.ico" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
 
-            <span class="logo__text">
-              Shiny Maker <strong>Studio</strong>
-            </span>
-          </a>
+<body>
+  <!-- HEADER -->
+  <header class="header-modern">
+    <div class="container header-modern__content">
+      <div class="logo-modern">
+        <a href="#inicio" class="logo__link">
+          <img src="assets/svg/destello.svg" alt="Shiny Maker Studio" class="logo__icon" />
+
+          <span class="logo__text">
+            Shiny Maker <strong>Studio</strong>
+          </span>
+        </a>
+      </div>
+
+      <nav class="nav-modern">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Ejemplos</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#proceso">Cómo funciona</a>
+        <a href="#faq">Preguntas</a>
+
+        <a class="btn btn--primary" onclick="openWhatsApp('general')">
+          Cotizar
+        </a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- BOTONES FLOTANTES -->
+  <div class="floating-socials floating-socials--top">
+    <a href="https://wa.me/522212576641" class="social-btn whatsapp" aria-label="WhatsApp">
+      <img src="assets/img/wh.png" alt="WhatsApp" />
+    </a>
+
+    <a href="https://www.instagram.com/shinymakerstudio?igsh=MTdkNDlnbW9xMHEyMA%3D%3D&utm_source=qr"
+      class="social-btn instagram" target="_blank" rel="noopener" aria-label="Instagram">
+      <img src="assets/img/ig.png" alt="Instagram" />
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61587591115184" class="social-btn facebook" target="_blank"
+      rel="noopener" aria-label="Facebook">
+      <img src="assets/img/fb.png" alt="Facebook" />
+    </a>
+  </div>
+
+  <!-- HERO EDITORIAL -->
+  <section id="inicio" class="hero-modern">
+    <div class="hero-modern__gradient"></div>
+
+    <div class="container hero-modern__grid">
+      <!-- TEXTO -->
+      <div class="hero-modern__content">
+        <span class="hero-badge">Interactivas</span>
+
+        <h1 class="hero-title-special">Invitaciones digitales</h1>
+
+        <p>
+          Incluye música, galería, mapa y confirmación para que tengas todo
+          organizado en un solo lugar.
+        </p>
+
+        <!-- CONTADOR -->
+        <div class="hero-counter hero-counter--inline">
+          <span class="counter" data-target="500">0</span>+ Invitaciones
+          vendidas
         </div>
 
-        <nav class="nav-modern">
-          <a href="#inicio">Inicio</a>
-          <a href="#catalogo">Ejemplos</a>
-          <a href="#paquetes">Precios</a>
-          <a href="#proceso">Cómo funciona</a>
-          <a href="#faq">Preguntas</a>
+        <!-- BOTONES -->
+        <div class="hero-modern__buttons">
+          <a href="#paquetes" class="btn btn--primary"> Ver Paquetes </a>
 
-          <a class="btn btn--primary" onclick="openWhatsApp('general')">
+          <a class="btn btn--outline" onclick="openWhatsApp('general')">
             Cotizar
           </a>
-        </nav>
-
-        <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
       </div>
-    </header>
 
-    <!-- BOTONES FLOTANTES -->
-    <div class="floating-socials floating-socials--top">
-      <a
-        href="https://wa.me/522212576641"
-        class="social-btn whatsapp"
-        aria-label="WhatsApp"
-      >
-        <img src="assets/img/wh.png" alt="WhatsApp" />
-      </a>
+      <!-- IMAGEN (queda limpia, sin contador encima) -->
+      <div class="hero-modern__image">
+        <img src="assets/svg/cel.svg" alt="Ejemplo invitaciones digitales" />
+      </div>
+    </div>
+  </section>
 
-      <a
-        href="https://www.instagram.com/shinymakerstudio?igsh=MTdkNDlnbW9xMHEyMA%3D%3D&utm_source=qr"
-        class="social-btn instagram"
-        target="_blank"
-        rel="noopener"
-        aria-label="Instagram"
-      >
-        <img src="assets/img/ig.png" alt="Instagram" />
-      </a>
-
-      <a
-        href="https://www.facebook.com/profile.php?id=61587591115184"
-        class="social-btn facebook"
-        target="_blank"
-        rel="noopener"
-        aria-label="Facebook"
-      >
-        <img src="assets/img/fb.png" alt="Facebook" />
-      </a>
+  <section id="catalogo" class="interactive-modern">
+    <div class="section-header-center">
+      <h2>Elige tu evento</h2>
+      <p>Mira un ejemplo real como se verá en el celular.</p>
     </div>
 
-    <!-- HERO EDITORIAL -->
-    <section id="inicio" class="hero-modern">
-      <div class="hero-modern__gradient"></div>
+    <!-- TABS -->
+    <div class="event-tabs" role="tablist" aria-label="Tipos de evento">
+      <button class="event-tab is-active" role="tab" aria-selected="true" data-event="boda"
+        data-video="assets/video/boda.mp4" data-title="Bodas"
+        data-desc="Porque ese día merece que cada detalle esté perfecto.">
+        <img src="assets/svg/boda.svg" alt="" />
+        <span>Bodas</span>
+      </button>
 
-      <div class="container hero-modern__grid">
-        <!-- TEXTO -->
-        <div class="hero-modern__content">
-          <span class="hero-badge">Interactivas</span>
+      <button class="event-tab" role="tab" aria-selected="false" data-event="xv" data-video="assets/video/xv.mp4"
+        data-title="XV Años" data-desc="Tu fiesta empieza desde la invitación.">
+        <img src="assets/svg/xv.svg" alt="" />
+        <span>XV Años</span>
+      </button>
 
-          <h1 class="hero-title-special">Invitaciones digitales</h1>
+      <button class="event-tab" role="tab" aria-selected="false" data-event="bautizo"
+        data-video="assets/video/bautizo.mp4" data-title="Bautizos"
+        data-desc="Delicada, bonita y pensada para compartir en familia.">
+        <img src="assets/svg/bautizo.svg" alt="" />
+        <span>Bautizo</span>
+      </button>
 
+      <button class="event-tab" role="tab" aria-selected="false" data-event="cumple"
+        data-video="assets/video/cumple.mp4" data-title="Cumpleaños" data-desc="Desde algo tierno hasta algo súper temático.
+Tú dime la idea y yo la hago realidad.">
+        <img src="assets/svg/cumple.svg" alt="" />
+        <span>Cumple</span>
+      </button>
+    </div>
+
+    <div class="interactive-modern__grid">
+      <!-- MOCKUP -->
+      <div class="interactive-modern__media reveal-left">
+        <p class="mockup-label">
+          Así se ve en el celular (sin descargar apps)
+        </p>
+
+        <div class="mockup-wrapper">
+          <button class="video-arrow video-prev">‹</button>
+
+          <div class="phone-mockup">
+            <video id="catalogVideo" autoplay muted loop playsinline>
+              <source id="catalogVideoSource" src="assets/video/boda.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <button class="video-arrow video-next">›</button>
+        </div>
+
+        <div class="event-copy">
+          <h3 id="eventTitle">Bodas</h3>
+          <p id="eventDesc">Elegancia digital para el día más importante.</p>
+        </div>
+
+        <div class="catalog-cta">
+          <button id="eventQuoteBtn" class="btn btn--primary" type="button">
+            Cotizar este evento
+          </button>
+          <a href="#paquetes" class="btn btn--outline">Ver paquetes</a>
+        </div>
+      </div>
+
+      <!-- FEATURES (reutilizas lo tuyo tal cual) -->
+      <div class="interactive-modern__features reveal-right">
+        <div class="feature-group">
+          <h4 class="feature-title">
+            <img src="assets/gif/music.gif" alt="Icono musica" class="feature-icon" />
+            Experiencia
+          </h4>
+          <ul>
+            <li>Música personalizada</li>
+            <li>Cuenta regresiva</li>
+            <li>Galería de fotos</li>
+          </ul>
+        </div>
+
+        <!-- INFORMACIÓN -->
+        <div class="feature-group">
+          <h4 class="feature-title">
+            <img src="assets/gif/location.gif" alt="Icono ubicacion" class="feature-icon" />
+            Información clara
+          </h4>
+          <ul>
+            <li>Ubicación con mapa interactivo</li>
+            <li>Itinerario del evento</li>
+            <li>Código de vestimenta</li>
+          </ul>
+        </div>
+
+        <!-- ORGANIZACIÓN -->
+        <div class="feature-group">
+          <h4 class="feature-title">
+            <img src="assets/gif/guests.gif" alt="Icono invitados" class="feature-icon" />
+            Organización inteligente
+          </h4>
+          <ul>
+            <li>Confirmación de asistencia (RSVP)</li>
+            <li>Panel de invitados</li>
+            <li>Control de mesas y pases</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="interactive-modern__divider"></div>
+  </section>
+
+  <section class="digital-advantage particles-rose">
+    <div class="section-header-center">
+      <h2>¿Por qué elegir una invitación digital?</h2>
+      <p>Más claridad para ti. Más comodidad para tus invitados.</p>
+    </div>
+    <div class="container digital-advantage__grid">
+      <!-- LADO TRADICIONAL -->
+      <div class="adv-card adv-card--muted reveal-left">
+        <span class="adv-badge adv-badge--muted">Antes</span>
+        <h3>Invitación tradicional</h3>
+
+        <div class="adv-features">
+          <p>Puede extraviarse o dañarse</p>
+          <p>Dirección escrita, sin guía interactiva</p>
+          <p>Sin control ni seguimiento</p>
+          <p>Sin control de invitados</p>
+        </div>
+      </div>
+
+      <!-- LADO DIGITAL -->
+      <div class="adv-card adv-card--highlight reveal-right">
+        <span class="adv-badge">Ahora</span>
+        <h3>Invitación digital</h3>
+
+        <div class="adv-features">
+          <p>Disponible desde cualquier celular</p>
+          <p>Confirmación de asistencia en tiempo real</p>
+          <p>Ubicación con mapa integrado</p>
+          <p>Control de invitados desde tu panel privado</p>
+        </div>
+
+        <a href="#paquetes" class="btn btn--primary"> Ver Paquetes </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="paquetes" class="packages-modern">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Nuestros Paquetes</h2>
+        <p>Elige la experiencia que mejor se adapte a tu evento.</p>
+      </div>
+
+      <!-- BODAS & XV -->
+      <div class="packages-category">
+        <h3 class="packages-category__title">Bodas | XV Años</h3>
+
+        <div class="packages-grid">
+          <!-- ESENCIA -->
+          <div class="package-card reveal-stagger reveal--d1">
+
+            <h4>🌸 Paquete Esencia</h4>
+
+            <p class="package-desc">
+              Invitación digital personalizada lista para compartir
+            </p>
+
+            <ul>
+              <li>🎵 Música personalizada</li>
+              <li>⏳ Cuenta regresiva al evento</li>
+              <li>🖼 Galería de fotos</li>
+              <li>📍 Ubicación con mapa interactivo</li>
+              <li>📅 Programa del evento</li>
+              <li>👗 Código de vestimenta</li>
+              <li>🎁 Integración con mesa de regalos</li>
+              <li>✅ Confirmación de asistencia vía WhatsApp</li>
+            </ul>
+
+            <button class="btn btn--outline" onclick="openWhatsApp('paquete1')">
+              Cotizar este paquete
+            </button>
+
+          </div>
+
+          <!-- ARMONÍA -->
+          <div class="package-card package-card--featured reveal-stagger reveal--d2">
+
+            <div class="package-badge">Más elegido</div>
+
+            <h4>🌷 Paquete Armonía</h4>
+
+            <p class="package-desc">
+              Incluye todo lo del Paquete Esencia, más herramientas para organizar a tus invitados ✨
+            </p>
+
+            <ul>
+              <li>📋 Panel de invitados</li>
+              <li>🎟 Pases digitales por invitado</li>
+              <li>🪑 Control de mesas</li>
+              <li>📱 Acceso mediante QR</li>
+            </ul>
+
+            <p class="package-note">
+              Los invitados reciben un pase digital con QR para identificar su acceso y su mesa al llegar al evento.
+            </p>
+
+            <button class="btn btn--primary" onclick="openWhatsApp('paquete2')">
+              Cotizar este paquete
+            </button>
+
+          </div>
+        </div>
+      </div>
+      <div class="packages-category">
+        <h3 class="packages-category__title">Cumpleaños | Bautizo</h3>
+
+        <div class="packages-grid">
+
+          <!-- FIESTA -->
+          <div class="package-card reveal-stagger reveal--d1">
+
+            <h4>🎉 Paquete Fiesta</h4>
+
+            <p class="package-desc">
+              Invitación digital bonita, práctica y fácil de compartir con tus invitados 📲
+            </p>
+
+            <ul>
+              <li>🎨 Diseño temático personalizado</li>
+              <li>🎵 Música personalizada</li>
+              <li>⏳ Cuenta regresiva al evento</li>
+              <li>🖼 Galería de fotos</li>
+              <li>📍 Ubicación del evento con mapa interactivo</li>
+              <li>✅ Confirmación de asistencia vía WhatsApp</li>
+            </ul>
+
+            <button class="btn btn--primary" onclick="openWhatsApp('fiesta')">
+              Cotizar este paquete
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" class="process-modern particles-rose">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Tu invitación en 5 pasos</h2>
+        <p>Te acompañamos paso a paso para que todo sea sencillo y claro.</p>
+      </div>
+
+      <div class="process-modern__wrapper">
+        <div class="process-modern__line"></div>
+
+        <article class="process-step-modern reveal-right reveal--d1">
+          <div class="process-step-modern__number">1</div>
+          <h4>Elige Diseño</h4>
           <p>
-            Incluye música, galería, mapa y confirmación para que tengas todo
-            organizado en un solo lugar.
+            Selecciona uno de nuestro catálogo o solicita uno personalizado.
           </p>
+        </article>
 
-          <!-- CONTADOR -->
-          <div class="hero-counter hero-counter--inline">
-            <span class="counter" data-target="500">0</span>+ Invitaciones
-            vendidas
-          </div>
+        <article class="process-step-modern reveal-right reveal--d2">
+          <div class="process-step-modern__number">2</div>
+          <h4>Envía Información</h4>
+          <p>Nombres, fecha, ubicación, fotos y detalles del evento.</p>
+        </article>
 
-          <!-- BOTONES -->
-          <div class="hero-modern__buttons">
-            <a href="#paquetes" class="btn btn--primary"> Ver Paquetes </a>
+        <article class="process-step-modern reveal-right reveal--d3">
+          <div class="process-step-modern__number">3</div>
+          <h4>Confirmación de Pago</h4>
+          <p>Pago completo o anticipo según el tipo de evento.</p>
+        </article>
 
-            <a class="btn btn--outline" onclick="openWhatsApp('general')">
-              Cotizar
-            </a>
-          </div>
-        </div>
+        <article class="process-step-modern reveal-right reveal--d4">
+          <div class="process-step-modern__number">4</div>
+          <h4>Diseño</h4>
+          <p>Personalizamos cada detalle de tu invitación.</p>
+        </article>
 
-        <!-- IMAGEN (queda limpia, sin contador encima) -->
-        <div class="hero-modern__image">
-          <img src="assets/svg/cel.svg" alt="Ejemplo invitaciones digitales" />
-        </div>
+        <article class="process-step-modern reveal-right reveal--d5">
+          <div class="process-step-modern__number">5</div>
+          <h4>Entrega Final</h4>
+          <p>Recibe tu link listo para compartir por WhatsApp.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="catalogo" class="interactive-modern">
+  <section id="faq" class="faq-modern">
+    <div class="container">
       <div class="section-header-center">
-        <h2>Elige tu evento</h2>
-        <p>Mira un ejemplo real como se verá en el celular.</p>
+        <h2>Preguntas frecuentes</h2>
+        <p>Lo que necesitas saber antes de contratar.</p>
       </div>
 
-      <!-- TABS -->
-      <div class="event-tabs" role="tablist" aria-label="Tipos de evento">
-        <button
-          class="event-tab is-active"
-          role="tab"
-          aria-selected="true"
-          data-event="boda"
-          data-video="assets/video/boda.mp4"
-          data-title="Bodas"
-          data-desc="Porque ese día merece que cada detalle esté perfecto."
-        >
-          <img src="assets/svg/boda.svg" alt="" />
-          <span>Bodas</span>
-        </button>
-
-        <button
-          class="event-tab"
-          role="tab"
-          aria-selected="false"
-          data-event="xv"
-          data-video="assets/video/xv.mp4"
-          data-title="XV Años"
-          data-desc="Tu fiesta empieza desde la invitación."
-        >
-          <img src="assets/svg/xv.svg" alt="" />
-          <span>XV Años</span>
-        </button>
-
-        <button
-          class="event-tab"
-          role="tab"
-          aria-selected="false"
-          data-event="bautizo"
-          data-video="assets/video/bautizo.mp4"
-          data-title="Bautizos"
-          data-desc="Delicada, bonita y pensada para compartir en familia."
-        >
-          <img src="assets/svg/bautizo.svg" alt="" />
-          <span>Bautizo</span>
-        </button>
-
-        <button
-          class="event-tab"
-          role="tab"
-          aria-selected="false"
-          data-event="cumple"
-          data-video="assets/video/cumple.mp4"
-          data-title="Cumpleaños"
-          data-desc="Desde algo tierno hasta algo súper temático.
-Tú dime la idea y yo la hago realidad."
-        >
-          <img src="assets/svg/cumple.svg" alt="" />
-          <span>Cumple</span>
-        </button>
-      </div>
-
-      <div class="interactive-modern__grid">
-        <!-- MOCKUP -->
-        <div class="interactive-modern__media reveal-left">
-          <p class="mockup-label">
-            Así se ve en el celular (sin descargar apps)
-          </p>
-
-          <div class="mockup-wrapper">
-            <button class="video-arrow video-prev">‹</button>
-
-            <div class="phone-mockup">
-              <video id="catalogVideo" autoplay muted loop playsinline>
-                <source
-                  id="catalogVideoSource"
-                  src="assets/video/boda.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-
-            <button class="video-arrow video-next">›</button>
-          </div>
-
-          <div class="event-copy">
-            <h3 id="eventTitle">Bodas</h3>
-            <p id="eventDesc">Elegancia digital para el día más importante.</p>
-          </div>
-
-          <div class="catalog-cta">
-            <button id="eventQuoteBtn" class="btn btn--primary" type="button">
-              Cotizar este evento
-            </button>
-            <a href="#paquetes" class="btn btn--outline">Ver paquetes</a>
-          </div>
-        </div>
-
-        <!-- FEATURES (reutilizas lo tuyo tal cual) -->
-        <div class="interactive-modern__features reveal-right">
-          <div class="feature-group">
-            <h4 class="feature-title">
-              <img
-                src="assets/gif/music.gif"
-                alt="Icono musica"
-                class="feature-icon"
-              />
-              Experiencia
-            </h4>
-            <ul>
-              <li>Música personalizada</li>
-              <li>Cuenta regresiva</li>
-              <li>Galería de fotos</li>
-            </ul>
-          </div>
-
-          <!-- INFORMACIÓN -->
-          <div class="feature-group">
-            <h4 class="feature-title">
-              <img
-                src="assets/gif/location.gif"
-                alt="Icono ubicacion"
-                class="feature-icon"
-              />
-              Información clara
-            </h4>
-            <ul>
-              <li>Ubicación con mapa interactivo</li>
-              <li>Itinerario del evento</li>
-              <li>Código de vestimenta</li>
-            </ul>
-          </div>
-
-          <!-- ORGANIZACIÓN -->
-          <div class="feature-group">
-            <h4 class="feature-title">
-              <img
-                src="assets/gif/guests.gif"
-                alt="Icono invitados"
-                class="feature-icon"
-              />
-              Organización inteligente
-            </h4>
-            <ul>
-              <li>Confirmación de asistencia (RSVP)</li>
-              <li>Panel de invitados</li>
-              <li>Control de mesas y pases</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="interactive-modern__divider"></div>
-    </section>
-
-    <section class="digital-advantage particles-rose">
-      <div class="section-header-center">
-        <h2>¿Por qué elegir una invitación digital?</h2>
-        <p>Más claridad para ti. Más comodidad para tus invitados.</p>
-      </div>
-      <div class="container digital-advantage__grid">
-        <!-- LADO TRADICIONAL -->
-        <div class="adv-card adv-card--muted reveal-left">
-          <span class="adv-badge adv-badge--muted">Antes</span>
-          <h3>Invitación tradicional</h3>
-
-          <div class="adv-features">
-            <p>Puede extraviarse o dañarse</p>
-            <p>Dirección escrita, sin guía interactiva</p>
-            <p>Sin control ni seguimiento</p>
-            <p>Sin control de invitados</p>
-          </div>
-        </div>
-
-        <!-- LADO DIGITAL -->
-        <div class="adv-card adv-card--highlight reveal-right">
-          <span class="adv-badge">Ahora</span>
-          <h3>Invitación digital</h3>
-
-          <div class="adv-features">
-            <p>Disponible desde cualquier celular</p>
-            <p>Confirmación de asistencia en tiempo real</p>
-            <p>Ubicación con mapa integrado</p>
-            <p>Control de invitados desde tu panel privado</p>
-          </div>
-
-          <a href="#paquetes" class="btn btn--primary"> Ver Paquetes </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="paquetes" class="packages-modern">
-      <div class="container">
-        <div class="section-header-center">
-          <h2>Nuestros Paquetes</h2>
-          <p>Elige la experiencia que mejor se adapte a tu evento.</p>
-        </div>
-
-        <!-- BODAS & XV -->
-        <div class="packages-category">
-          <h3 class="packages-category__title">Bodas | XV Años</h3>
-
-          <div class="packages-grid">
-            <!-- ESENCIA -->
-            <div class="package-card reveal-stagger reveal--d1">
-              <h4>Paquete Esencia</h4>
-
-              <div class="package-price-wrapper">
-                <span class="package-price-old">$800</span>
-                <span class="package-price">$600 <span>MXN</span></span>
-              </div>
-
-              <span class="package-save">Ahorra $200</span>
-
-              <ul>
-                <li>Canción personalizada</li>
-                <li>Cuenta regresiva</li>
-                <li>Galería de fotos</li>
-                <li>Ubicación del evento</li>
-                <li>Itinerario</li>
-                <li>Código de vestimenta</li>
-              </ul>
-
-              <button
-                class="btn btn--outline"
-                onclick="openWhatsApp('esencia')"
-              >
-                Seleccionar
-              </button>
-            </div>
-
-            <!-- ARMONÍA -->
-            <div
-              class="package-card package-card--featured reveal-stagger reveal--d2"
-            >
-              <div class="package-badge">Más elegido</div>
-
-              <h4>Paquete Armonía</h4>
-
-              <div class="package-price-wrapper">
-                <span class="package-price-old">$1,600</span>
-                <span class="package-price">$1,200 <span>MXN</span></span>
-              </div>
-
-              <span class="package-save">Ahorra $400</span>
-
-              <ul>
-                <li>Todo lo del paquete Esencia</li>
-                <li>Confirmación RSVP</li>
-                <li>Panel de invitados</li>
-                <li>Pases por invitado</li>
-                <li>Control de mesas</li>
-              </ul>
-
-              <button
-                class="btn btn--primary"
-                onclick="openWhatsApp('armonia')"
-              >
-                Contratar Ahora
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="packages-category">
-          <h3 class="packages-category__title">Cumpleaños | Bautizo</h3>
-
-          <div class="packages-grid">
-            <div class="package-card reveal-stagger reveal--d1">
-              <h4>Paquete Fiesta</h4>
-
-              <div class="package-price-wrapper">
-                <span class="package-price-old">$550</span>
-                <span class="package-price">$350 <span>MXN</span></span>
-              </div>
-
-              <span class="package-save">Ahorra $200</span>
-
-              <ul>
-                <li>Diseño temático</li>
-                <li>Música</li>
-                <li>Cuenta regresiva</li>
-                <li>Galería de fotos</li>
-                <li>Ubicación</li>
-              </ul>
-
-              <button class="btn btn--outline">Seleccionar</button>
-            </div>
-
-            <div
-              class="package-card package-card--featured reveal-stagger reveal--d2"
-            >
-              <div class="package-badge">Más completo</div>
-
-              <h4>Paquete Fiesta Plus</h4>
-
-              <div class="package-price-wrapper">
-                <span class="package-price-old">$850</span>
-                <span class="package-price">$600 <span>MXN</span></span>
-              </div>
-
-              <span class="package-save">Ahorra $250</span>
-
-              <ul>
-                <li>Todo lo del Fiesta</li>
-                <li>Confirmación RSVP</li>
-                <li>Lista simple de invitados</li>
-              </ul>
-
-              <button class="btn btn--primary">Contratar Ahora</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESO -->
-    <section id="proceso" class="process-modern particles-rose">
-      <div class="container">
-        <div class="section-header-center">
-          <h2>Tu invitación en 5 pasos</h2>
-          <p>Te acompañamos paso a paso para que todo sea sencillo y claro.</p>
-        </div>
-
-        <div class="process-modern__wrapper">
-          <div class="process-modern__line"></div>
-
-          <article class="process-step-modern reveal-right reveal--d1">
-            <div class="process-step-modern__number">1</div>
-            <h4>Elige Diseño</h4>
+      <div class="faq-accordion">
+        <div class="faq-item reveal-scale reveal--d1">
+          <button class="faq-question">
+            ¿Cuánto tiempo tarda la entrega?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
             <p>
-              Selecciona uno de nuestro catálogo o solicita uno personalizado.
+              El tiempo promedio es de 3 a 5 días dependiendo del tipo de
+              evento y la cantidad de información enviada.
             </p>
-          </article>
-
-          <article class="process-step-modern reveal-right reveal--d2">
-            <div class="process-step-modern__number">2</div>
-            <h4>Envía Información</h4>
-            <p>Nombres, fecha, ubicación, fotos y detalles del evento.</p>
-          </article>
-
-          <article class="process-step-modern reveal-right reveal--d3">
-            <div class="process-step-modern__number">3</div>
-            <h4>Confirmación de Pago</h4>
-            <p>Pago completo o anticipo según el tipo de evento.</p>
-          </article>
-
-          <article class="process-step-modern reveal-right reveal--d4">
-            <div class="process-step-modern__number">4</div>
-            <h4>Diseño</h4>
-            <p>Personalizamos cada detalle de tu invitación.</p>
-          </article>
-
-          <article class="process-step-modern reveal-right reveal--d5">
-            <div class="process-step-modern__number">5</div>
-            <h4>Entrega Final</h4>
-            <p>Recibe tu link listo para compartir por WhatsApp.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="faq-modern">
-      <div class="container">
-        <div class="section-header-center">
-          <h2>Preguntas frecuentes</h2>
-          <p>Lo que necesitas saber antes de contratar.</p>
+          </div>
         </div>
 
-        <div class="faq-accordion">
-          <div class="faq-item reveal-scale reveal--d1">
-            <button class="faq-question">
-              ¿Cuánto tiempo tarda la entrega?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                El tiempo promedio es de 3 a 5 días dependiendo del tipo de
-                evento y la cantidad de información enviada.
-              </p>
-            </div>
+        <div class="faq-item reveal-scale reveal--d1">
+          <button class="faq-question">
+            ¿Cómo se realiza el pago?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Puedes pagar por transferencia bancaria. En algunos casos se
+              solicita anticipo y el resto al finalizar el diseño.
+            </p>
           </div>
+        </div>
 
-          <div class="faq-item reveal-scale reveal--d1">
-            <button class="faq-question">
-              ¿Cómo se realiza el pago?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Puedes pagar por transferencia bancaria. En algunos casos se
-                solicita anticipo y el resto al finalizar el diseño.
-              </p>
-            </div>
+        <div class="faq-item reveal-scale reveal--d1">
+          <button class="faq-question">
+            ¿Funciona en cualquier celular?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Sí. Se abre desde cualquier navegador moderno sin necesidad de
+              descargar aplicaciones.
+            </p>
           </div>
+        </div>
 
-          <div class="faq-item reveal-scale reveal--d1">
-            <button class="faq-question">
-              ¿Funciona en cualquier celular?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Sí. Se abre desde cualquier navegador moderno sin necesidad de
-                descargar aplicaciones.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item reveal-scale reveal--d1">
-            <button class="faq-question">
-              ¿Cómo funciona la confirmación de asistencia?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Tus invitados confirman desde el link y tú puedes ver las
-                respuestas en tiempo real si tu paquete lo incluye.
-              </p>
-            </div>
+        <div class="faq-item reveal-scale reveal--d1">
+          <button class="faq-question">
+            ¿Cómo funciona la confirmación de asistencia?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Tus invitados confirman desde el link y tú puedes ver las
+              respuestas en tiempo real si tu paquete lo incluye.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__divider"></div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__divider"></div>
 
-        <div class="footer__content">
-          <!-- MARCA -->
-          <div class="footer__brand">
-            <h3>© Shiny Maker Studio</h3>
-            <p class="footer__description"></p>
-            <p class="footer__trust">
-              Diseño personalizado · Acompañamiento real · Entrega rápida
-            </p>
-          </div>
+      <div class="footer__content">
+        <!-- MARCA -->
+        <div class="footer__brand">
+          <h3>© Shiny Maker Studio</h3>
+          <p class="footer__description"></p>
+          <p class="footer__trust">
+            Diseño personalizado · Acompañamiento real · Entrega rápida
+          </p>
+        </div>
 
-          <!-- CTA -->
-          <div class="footer__cta">
-            <p class="footer__cta-text">¿Creamos algo especial juntos?</p>
-            <a class="btn btn--primary" onclick="openWhatsApp('general')">
-              Cotizar mi invitación
+        <!-- CTA -->
+        <div class="footer__cta">
+          <p class="footer__cta-text">¿Creamos algo especial juntos?</p>
+          <a class="btn btn--primary" onclick="openWhatsApp('general')">
+            Cotizar mi invitación
+          </a>
+        </div>
+
+        <!-- REDES + WHATS -->
+        <div class="footer__socials">
+          <p class="footer__socials-title">Síguenos o escríbenos</p>
+
+          <div class="footer__social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61587591115184" target="_blank" rel="noopener"
+              aria-label="Facebook">
+              <img src="assets/img/fb.png" alt="Facebook" />
+            </a>
+
+            <a href="https://www.instagram.com/shinymakerstudio" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="assets/img/ig.png" alt="Instagram" />
             </a>
           </div>
 
-          <!-- REDES + WHATS -->
-          <div class="footer__socials">
-            <p class="footer__socials-title">Síguenos o escríbenos</p>
-
-            <div class="footer__social-icons">
-              <a
-                href="https://www.facebook.com/profile.php?id=61587591115184"
-                target="_blank"
-                rel="noopener"
-                aria-label="Facebook"
-              >
-                <img src="assets/img/fb.png" alt="Facebook" />
-              </a>
-
-              <a
-                href="https://www.instagram.com/shinymakerstudio"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-              >
-                <img src="assets/img/ig.png" alt="Instagram" />
-              </a>
-            </div>
-
-            <div class="footer__whats">
-              <a href="https://wa.me/522212576641">
-                <img src="assets/img/wh.png" alt="WhatsApp" />
-                WhatsApp Ventas
-              </a>
-            </div>
+          <div class="footer__whats">
+            <a href="https://wa.me/522212576641">
+              <img src="assets/img/wh.png" alt="WhatsApp" />
+              WhatsApp Ventas
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/whatsapp.js"></script>
-  </body>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+</body>
+
 </html>
